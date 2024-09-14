@@ -7,3 +7,6 @@ def storehome(request):
 def aboutus(request):
     return render(request, 'store/aboutus.html', {})
 
+def reviews(request):
+    return render(request, 'store/reviews.html', {})
+
