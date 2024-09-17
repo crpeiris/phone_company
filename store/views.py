@@ -12,6 +12,3 @@ def aboutus(request):
 def reviews(request):
     return render(request, 'store/reviews.html', {})
 
-# This view return ‘reviews.html’ files.
-def reviews(request):
-    return render(request, 'reviews.html', {})
