@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .models import Product
+
 
 # Create your views here.
 def storehome(request):
-    return render(request, 'store/storehome.html', {})
+    product = Product.objects.all()
+    return render(request, 'store/storehome.html', {'products': product})
 
 # This view return 'aboutus.html’ files.
 def aboutus(request):
