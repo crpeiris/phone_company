@@ -33,9 +33,6 @@ post_save.connect(create_profile, sender=User)
 
  
 
-
-
-
 # Categories of Products
 class Category(models.Model):
 	name = models.CharField(max_length=50)
