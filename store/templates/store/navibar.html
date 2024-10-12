@@ -29,6 +29,35 @@
           <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
         </li>
 
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="{% url 'logout_user' %}"
+            >Logout</a
+          >
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="{% url 'login_user' %}"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="{% url 'register_user' %}"
+            >Signup</a
+          >
+        </li>
+        {% endif %}
+
+
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"

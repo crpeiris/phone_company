@@ -1,0 +1,30 @@
+{% extends 'store/base.html' %} {% block content %}
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">Signup for Future Store</h1>
+      <p class="lead fw-normal text-white-50 mb-0">Buy Future Phone Today</p>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+      <celeft>
+        <div class="col-8">
+          <br />
+          <br />
+          <form method ="POST" action="{% url 'register_user' %}">
+            {%  csrf_token %}
+             
+            {{ form.as_p}}
+            <br /> <br />
+            <button type="submit" class="btn btn-secondary">Signup</button>
+          </form>
+          <br />
+          <br />
+        </div>
+      </left>
+    </div>
+  </div>
+
+{% endblock %}
