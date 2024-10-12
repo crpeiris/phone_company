@@ -1,14 +1,19 @@
 from django.shortcuts import render, redirect
-from .models import Product
+from .models import Product,Category
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .forms import SignUpForm
 from django import forms
 
 # Create your views here.
-def storehome(request):
-    product = Product.objects.all()
-    return render(request, 'store/storehome.html', {'products': product})
+def storehome(request, category = None):
+    if category:
+        category = Category.objects.get(name=category)
+        product = Product.objects.filter(category=category)
+        return render(request, 'store/storehome.html', {'products': product, 'category' : category})
+    else:
+        product = Product.objects.all()
+        return render(request, 'store/storehome.html', {'products': product})
 
 # This view return 'aboutus.html’ files.
 def aboutus(request):

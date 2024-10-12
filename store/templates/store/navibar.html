@@ -57,7 +57,6 @@
         </li>
         {% endif %}
 
-
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -66,13 +65,15 @@
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            >Shop</a
+            >Shop</a 
           >
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#!">All Products</a></li>
+            {% for category in categoryies %}
+            <li> <a href="{% url 'storehome' category.name %}"> {{ category.name }} </a> </li>
+            {% endfor %}
+            </ul>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
           </ul>
         </li>
       </ul>
