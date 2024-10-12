@@ -8,6 +8,7 @@
   </div>
 </header>
 <div class="container">
+</br>
   <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
@@ -20,23 +21,23 @@
       <div class="col-md-8">
         <div class="card-body">
           <div class="card-body p-4">
-            <div class="text-center"
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">{{product.name}}</h5>
-  
-                  <div class="d-flex justify-content-center small text-warning mb-2">
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                </div>
-  
-                  <!-- Product price-->
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">{{product.name}}</h5>
+              <div class="d-flex justify-content-center small text-warning mb-2">
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+            </div>
+              <!-- Product price-->
+                {% if product.is_sale %} 
                   <strike> ${{product.price}} </strike>
-                  &nbsp; ${{product.price}}
-                  <br />
-                  {{product.description}}
+                {% endif %}
+              ${{product.price}}
+              <br />
+              {{ product.description }}
             </br>
           </br>
             <a href="{% url 'storehome' %}" class="btn btn-secondary">Home</a>
