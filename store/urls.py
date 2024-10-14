@@ -10,7 +10,8 @@ urlpatterns = [
     path('login',views.login_user, name='login_user'),
     path('logout',views.logout_user, name='logout_user'),
     path('register',views.register_user, name='register_user'),
-    re_path(r'^shop/(?P<category>[a-zA-Z0-9\s]+)?/$',views.shop, name='shop'),
+    path('shop',views.shop, name='shop'),
+    path('shop/<str:category>/', views.shop, name='shop'),
     path('product/<int:product_id>/', views.product, name='product'),
 ]
 urlpatterns += staticfiles_urlpatterns()

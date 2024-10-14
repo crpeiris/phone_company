@@ -63,6 +63,10 @@ def product(request, product_id):
     product = Product.objects.get(id=product_id)
     return render(request, 'store/product.html', {'product' : product, 'title': product.name })
 
+def shop(request):
+    product = Product.objects.all()
+    return render(request, 'store/shop.html', {'products': product, 'title': 'All Products'})
+
 def shop(request, category = None):
     if category:
         category = Category.objects.get(name=category)
