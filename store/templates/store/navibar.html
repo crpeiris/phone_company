@@ -68,9 +68,9 @@
             >Shop</a 
           >
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#!">All Products</a></li>
+            <li><a class="dropdown-item" href="{% url 'shop' %}">All Products</a></li>
             {% for category in categoryies %}
-            <li> <a href="{% url 'storehome' category.name %}"> {{ category.name }} </a> </li>
+            <li> <a href="{% url 'shop' category.name %}"> {{ category.name }} </a> </li>
             {% endfor %}
             </ul>
             <li><hr class="dropdown-divider" /></li>

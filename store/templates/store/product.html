@@ -1,14 +1,5 @@
 {% extends 'store/base.html' %} {% block content %}
-<header class="bg-dark py-5">
-  <div class="container px-4 px-lg-5 my-5">
-    <div class="text-center text-white">
-      <h1 class="display-4 fw-bolder">{{ product.name}}</h1>
-      <p class="lead fw-normal text-white-50 mb-0">{{ product.price}}</p>
-    </div>
-  </div>
-</header>
 <div class="container">
-</br>
   <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
@@ -20,29 +11,12 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <div class="card-body p-4">
-            <div class="text-center">
-              <!-- Product name-->
-              <h5 class="fw-bolder">{{product.name}}</h5>
-              <div class="d-flex justify-content-center small text-warning mb-2">
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-            </div>
-              <!-- Product price-->
-                {% if product.is_sale %} 
-                  <strike> ${{product.price}} </strike>
-                {% endif %}
-              ${{product.price}}
-              <br />
-              {{ product.description }}
-            </br>
-          </br>
-            <a href="{% url 'storehome' %}" class="btn btn-secondary">Home</a>
-            </div>
-          </div>
+          <h5 class="card-title">{{ product.name}}</h5>
+          <p class="card-text">{{ product.description}}</p>
+          <h5 class="card-title">{{ product.price}}</h5>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
         </div>
       </div>
     </div>

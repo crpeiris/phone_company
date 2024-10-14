@@ -6,21 +6,16 @@ from .forms import SignUpForm
 from django import forms
 
 # Create your views here.
-def storehome(request, category = None):
-    if category:
-        category = Category.objects.get(name=category)
-        product = Product.objects.filter(category=category)
-        return render(request, 'store/storehome.html', {'products': product, 'category' : category})
-    else:
-        product = Product.objects.all()
-        return render(request, 'store/storehome.html', {'products': product})
+def storehome(request,):
+    return render(request, 'store/storehome.html', {'title': 'Next Gen Phone Shop'})
+
 
 # This view return 'aboutus.html’ files.
 def aboutus(request):
-    return render(request, 'store/aboutus.html', {})
+    return render(request, 'store/aboutus.html', {'title': 'About us'})
 
 def reviews(request):
-    return render(request, 'store/reviews.html', {})
+    return render(request, 'store/reviews.html', {'title': 'Customer Reviews'})
 
 
 def login_user(request):
@@ -36,7 +31,7 @@ def login_user(request):
             messages.success(request, ("Username or Password incorrect...Please try again"))
             return redirect ('login_user')
     else:
-        return render( request, 'store/login.html', {})
+        return render( request, 'store/login.html', {'title': 'Sign in'})
 
 
 def logout_user(request):
@@ -62,8 +57,17 @@ def register_user(request):
             messages.success(request, ("threre is a problem registering, try agaian"))
             return redirect('storehome')
     else:
-        return render(request,'store/register.html', {'form': form})
+        return render(request,'store/register.html', {'form': form, 'title': 'Join with us'})
 
-def product(request,pk):
-    product = Product.objects.get(id=pk)
-    return render(request, 'store/product.html', {'product' : product})
+def product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'store/product.html', {'product' : product, 'title': product.name })
+
+def shop(request, category = None):
+    if category:
+        category = Category.objects.get(name=category)
+        product = Product.objects.filter(category=category)
+        return render(request, 'store/shop.html', {'products': product, 'category' : category, 'title': category})
+    else:
+        product = Product.objects.all()
+        return render(request, 'store/shop.html', {'products': product, 'category': 'all', 'title': 'All Phones' })
