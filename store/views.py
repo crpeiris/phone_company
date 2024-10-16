@@ -59,19 +59,15 @@ def register_user(request):
     else:
         return render(request,'store/register.html', {'form': form, 'title': 'Join with us'})
 
-def product(request, product_id):
-    product = Product.objects.get(id=product_id)
-    return render(request, 'store/product.html', {'product' : product, 'title': product.name })
-
-def shop(request):
-    product = Product.objects.all()
-    return render(request, 'store/shop.html', {'products': product, 'title': 'All Products'})
-
 def shop(request, category = None):
     if category:
         category = Category.objects.get(name=category)
-        product = Product.objects.filter(category=category)
-        return render(request, 'store/shop.html', {'products': product, 'category' : category, 'title': category})
+        products = Product.objects.filter(category=category)
+        return render(request, 'store/shop.html', {'products': products, 'category' : category, 'title': category})
     else:
-        product = Product.objects.all()
-        return render(request, 'store/shop.html', {'products': product, 'category': 'all', 'title': 'All Phones' })
+        products = Product.objects.all()
+        return render(request, 'store/shop.html', {'products': products, 'category': 'all', 'title': 'All Phones' })
+
+def product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'store/product.html', {'product' : product, 'title': product.name })
