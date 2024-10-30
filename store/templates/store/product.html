@@ -20,23 +20,28 @@
             <div class="bi-star-fill"></div>
             <div class="bi-star-fill"></div>
             <div class="bi-star-fill"></div>
+          </br>
           </div>
 
           <!-- Product price striked if sale-->
           <h4>
           {% if product.is_sale %}
-          <strike> ${{product.price}} </strike>
+          <strike> ${{product.price}} &nbsp;</strike>
           {% endif %}
-          &nbsp; ${{product.sale_price}}
-          </h4>
+          ${{product.sale_price}}
+          <a class="btn btn-outline-dark mt-auto" href = "{% url 'shop' %}" > Go to Shop</a>
+        </h4>
           <br />
           <p class = "card-text">
           {{product.description}}
           </p>
           </div>
+
           <p class = "card-text">
           {{product.more_info}}
           </p>
+        </br>
+        
         </div>
       </div>
     </div>
