@@ -28,15 +28,19 @@
           <strike> ${{product.price}} </strike>
           {% endif %}
           &nbsp; ${{product.sale_price}}
-          </h4>
+          <a class="btn btn-outline-dark mt-auto" href = "{% url 'shop' %}" > Go to Shop</a>
+        </h4>
           <br />
           <p class = "card-text">
           {{product.description}}
           </p>
           </div>
+
           <p class = "card-text">
           {{product.more_info}}
           </p>
+        </br>
+        
         </div>
       </div>
     </div>
