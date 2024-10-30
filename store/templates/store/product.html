@@ -37,10 +37,36 @@
           <p class = "card-text">
           {{product.more_info}}
           </p>
+        </br>
+        <a href="{% url 'shop' %}" class ="btn btn-secondary"> Shop</a>
+        <button type = "button" value="{{product.id}} " class ="btn btn-secondary" id="add-cart"> Add to Cart</button>
+        </br>
+        </br>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+  //check if button press
+  $(document).on('click', '#add-cart', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: "{% url 'cart_add' %}",
+      data: {
+        product_id: $('#add-cart').val(),
+        csrfmiddlewaretoke: '{{ csrf_token }}',
+        action: 'post'
+      },
+
+      success: function(json){
+        console.log(json)
+      },
+      error: function(xmr, errmsg, err)
+    });
+
+  })
+</script>
 {% endblock %}

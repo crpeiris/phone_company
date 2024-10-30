@@ -23,5 +23,6 @@ from store import views as storeviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('store/', include('store.urls')),
+    path('cart/', include('cart.urls')),
     path ('', storeviews.storehome),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
