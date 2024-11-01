@@ -51,6 +51,7 @@ class Customer(models.Model):
 	last_name = models.CharField(max_length=50)
 	phone = models.CharField(max_length=10)
 	email = models.EmailField(max_length=100)
+	address = models.CharField(max_length=100, default='', blank=True)
 	password = models.CharField(max_length=100)
 
 
