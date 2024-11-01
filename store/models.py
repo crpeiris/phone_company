@@ -98,3 +98,14 @@ class OrderProduct(models.Model):
 	
 	def __str__(self):
 		return "{}_{}".format(self.order.__str__(), self.product.__str__())
+
+
+class CartItem(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_added = models.DateTimeField(auto_now_add=True)
+    purchase= models.BooleanField(default=True, blank=True)
+
+    def __str__(self):
+        return f'{self.quantity} x {self.product.name}'
