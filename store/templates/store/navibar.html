@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container px-4 px-lg-5">
-    <a class="navbar-brand" href="#!">Phone Shop</a>
+    <a class="navbar-brand" href="{% url 'shop' %}">Phone Shop</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -77,13 +77,53 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
+     
+      {% if user.is_anonymous %}
+        <button id="viewCartButton" class="btn btn-outline-dark" type="button">
           <i class="bi-cart-fill me-1"></i>
           Cart
-          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+          <span class="badge bg-dark text-white ms-1 rounded-pill">{{ cart_items_count }}</span>
         </button>
-      </form>
+        <script>
+          // Function to display the alert when the user is not logged in
+          function not_logged_user_alert() {
+              const alertContainer = document.getElementById("loginAlert");
+              alertContainer.style.display = "block";  // Show the alert
+          }
+
+          // Add click event listener to the button once the DOM is fully loaded
+          document.addEventListener("DOMContentLoaded", function() {
+              const cartButton = document.getElementById("viewCartButton");
+              if (cartButton) {
+                  cartButton.addEventListener("click", function(event) {
+                      not_logged_user_alert();  // Call the alert function
+                  });
+              }
+          });
+        </script>
+      {% else %}
+        <form action="{% url 'view_cart' %}" class="d-flex">
+          <button class="btn btn-outline-dark" type="submit">
+            <i class="bi-cart-fill me-1"></i>
+            Cart
+            <span class="badge bg-dark text-white ms-1 rounded-pill">{{ cart_items_count }}</span>
+          </button>
+        </form>
+      {% endif %}
     </div>
   </div>
 </nav>
+
+<!-- Hidden alert container to display the login message -->
+<div id="loginAlert" class="alert alert-warning" style="display: none; align-items: center;">
+  <span>You must log in to create and view your cart.</span>
+  <button id="closeAlertButton" class="btn-close" aria-label="Close" style="margin-left: 10px;"></button>
+</div>
+
+<script>
+  // Function to close the alert
+  document.getElementById("closeAlertButton").onclick = function() {
+      var alertDiv = document.getElementById("loginAlert");
+      alertDiv.style.display = "none"; // Hides the alert
+  };
+</script>
