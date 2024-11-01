@@ -3,14 +3,15 @@
 {% block content %}
 </br>
 <div class = "row justify-content-center" >
-<table class = "table table-light padding: 0.5rem 0.5rem " style="width: 60%;">
+<table class = "table table-light padding: 0.5rem 0.5rem " style="width: 75%;">
     <tr>
         <th>Product</th>
         <th>No of units</th>
         <th>Unit price</th>
         <th>Unit Total</th>
         <th>Image</th>
-        <th>Delete</th>
+        <th>To Next Order</th>
+        <th>Remove</th>
     {% for item in cart_items %}
     <tr>
         <div>
@@ -19,6 +20,12 @@
             <td class="text-end">${{ item.product.sale_price }}</td>
             <td class="text-end">${{item.product.sale_price|multiply:item.quantity|floatformat:2 }}</td>
             <td style="text-align: center;" ><img style="width: 50px;" src="{{item.product.image.url}}" alt="..." /></td>
+            <td class="text-center">
+                <input type="checkbox" id="purchase-{{ item.id }}" name="purchase"
+                       data-id="{{ item.id }}" 
+                       {% if item.purchase %}checked{% endif %} 
+                       onchange="togglePurchase(this)">
+            </td>
             <td><a class="btn btn-secondary" href="{% url 'remove_from_cart' item.id %}">Remove</a>          
             </td>
         </div>
@@ -36,8 +43,33 @@
         <td class="text-end"> ${{ total_price }} </td>
         <td> <a class="btn btn-outline-dark mt-auto" href="{% url 'shop' %}">Continue Shopping</a></td>
         <td></td>
+        <td></td>
     </tr>
 </table> 
 </br>
 </br>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function togglePurchase(checkbox) {
+        const isChecked = checkbox.checked;
+        const itemId = $(checkbox).data('id');
+    
+        $.ajax({
+            url: 'update-purchase/',
+            type: 'POST',
+            data: {
+                'id': itemId,
+                'purchase': isChecked,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                console.log('Update successful:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Update failed:', error);
+            }
+        });
+    }
+    </script>
 {% endblock %}

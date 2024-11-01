@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .forms import SignUpForm
 from django import forms
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def storehome(request):
@@ -94,3 +96,19 @@ def remove_from_cart(request, item_id):
     cart_item = CartItem.objects.get(id=item_id)
     cart_item.delete()
     return redirect('view_cart')
+
+@csrf_exempt  # Consider adding CSRF protection for production
+def update_purchase(request):
+    if request.method == 'POST':
+        item_id = request.POST.get('id')
+        purchase_value = request.POST.get('purchase') == 'true'  # Convert to boolean
+
+        try:
+            item = CartItem.objects.get(id=item_id)
+            item.purchase = purchase_value  # Update the purchase field
+            item.save()
+            return JsonResponse({'status': 'success'})
+        except CartItem.DoesNotExist:
+            return JsonResponse({'status': 'error', 'message': 'Item not found.'})
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request.'})
