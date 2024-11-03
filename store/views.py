@@ -1,11 +1,14 @@
+from datetime import datetime
 from django.shortcuts import render, redirect
-from .models import CartItem, Product,Category
+from .models import CartItem, Product,Category,Order,OrderProduct
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .forms import SignUpForm
 from django import forms
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.db import transaction
+
 
 # Create your views here.
 def storehome(request):
@@ -112,3 +115,31 @@ def update_purchase(request):
             return JsonResponse({'status': 'error', 'message': 'Item not found.'})
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request.'})
+
+@transaction.atomic
+def create_order(request):
+    if request.user.is_authenticated:
+        try:
+            new_order= Order.objects.create( customer=request.user, date=datetime.now().date())
+            #order.address = request.user.address
+            #order.phone = request.user.phone
+            new_order.save()
+    
+            cart_items_purchase = CartItem.objects.filter(user=request.user , purchase=True)
+            if cart_items_purchase:
+                for item in cart_items_purchase:
+                    product = Product.objects.get(id=item.product_id)  
+                    soldprice = product.sale_price  
+                    orderproduct = OrderProduct.objects.create(product= item.product, order= new_order)
+                    orderproduct.quantity = item.quantity
+                    orderproduct.soldprice= soldprice
+                    orderproduct.save()  
+
+            order_items = OrderProduct.objects.filter(order_id = new_order.id)
+            total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
+            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview'})
+
+        except Exception as e:
+           print ("error creating order : " , e)
+           return redirect('view_cart') 
+

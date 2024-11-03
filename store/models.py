@@ -31,8 +31,6 @@ def create_profile(sender, instance, created, **kwargs):
 post_save.connect(create_profile, sender=User)
 
 
- 
-
 # Categories of Products
 class Category(models.Model):
 	name = models.CharField(max_length=50)
@@ -79,7 +77,7 @@ class Product(models.Model):
 # Customer Orders
 class Order(models.Model):
 	product = models.ManyToManyField(Product, through='OrderProduct')
-	customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+	customer = models.ForeignKey(User, on_delete=models.CASCADE)
 	quantity = models.IntegerField(default=1)
 	address = models.CharField(max_length=100, default='', blank=True)
 	phone = models.CharField(max_length=20, default='', blank=True)
@@ -101,6 +99,7 @@ class OrderProduct(models.Model):
 
 
 class CartItem(models.Model):
+	
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
