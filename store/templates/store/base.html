@@ -26,6 +26,7 @@
     {% include 'store/navibar.html' %}
     {% include 'store/header.html' %}
 
+    <!-- If avilable, display messages -->
     {% if messages %}
       {% for message in messages %}
         <div class="alert alert-dismissable fade show" role="alert"> 
@@ -36,7 +37,7 @@
     {% endif %}
 
     {% block content %}
-      <!-- Page-specific content goes here -->
+    <!-- Page-specific content goes here -->
     {% endblock %}
     
     <!-- the footer -->

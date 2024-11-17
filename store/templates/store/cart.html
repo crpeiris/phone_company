@@ -2,52 +2,61 @@
 {% load store_formula %}
 {% block content %}
 </br>
-<div class = "row justify-content-center" >
-<table class = "table table-light padding: 0.5rem 0.5rem " style="width: 75%;">
-    <tr>
-        <th>Product</th>
-        <th>No of units</th>
-        <th>Unit price</th>
-        <th>Unit Total</th>
-        <th>Image</th>
-        <th>To Next Order</th>
-        <th>Remove</th>
-    {% for item in cart_items %}
-    <tr>
-        <div>
-            <td>{{ item.product.name }}</td>
-            <td>{{ item.quantity }}</td>
-            <td class="text-end">${{ item.product.sale_price }}</td>
-            <td class="text-end">${{item.product.sale_price|multiply:item.quantity|floatformat:2 }}</td>
-            <td style="text-align: center;" ><img style="width: 50px;" src="{{item.product.image.url}}" alt="..." /></td>
-            <td class="text-center">
-                <input type="checkbox" id="purchase-{{ item.id }}" name="purchase"
-                       data-id="{{ item.id }}" 
-                       {% if item.purchase %}checked{% endif %} 
-                       onchange="togglePurchase(this)">
-            </td>
-            <td><a class="btn btn-secondary" href="{% url 'remove_from_cart' item.id %}">Remove</a>          
-            </td>
-        </div>
-    </tr>
 
-    {% empty %}
-        <h3 class = "row justify-content-center" >Your cart is empty.</h3>
-    {% endfor %}
 
+{% if cart_items_count == 0 %}
+<h3 class = "row justify-content-center" >Your cart is empty.</h3>
+<h4 class = "row justify-content-center" >Go to shop, select a product to add to the cart</h4>
+<h3 class = "row justify-content-center"><a class="btn btn-primary justify-content-center" href="{% url 'shop' %}">Go to Shop</a></h3>
+
+{% endif %}
+
+{% if cart_items_count > 0 %}
+    <div class = "row justify-content-center" >
+        <table class = "table table-light padding: 0.5rem 0.5rem " style="width: 75%;">
+            <tr>
+                <th>Product</th>
+                <th>No of units</th>
+                <th>Unit price</th>
+                <th>Unit Total</th>
+                <th>Image</th>
+                <th>To Next Order</th>
+                <th>Remove</th>
+            {% for item in cart_items %}
+            <tr>
+                <div>
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td class="text-end">${{ item.product.sale_price }}</td>
+                    <td class="text-end">${{item.product.sale_price|multiply:item.quantity|floatformat:2 }}</td>
+                    <td style="text-align: center;" ><img style="width: 50px;" src="{{item.product.image.url}}" alt="..." /></td>
+                    <td class="text-center">
+                        <input type="checkbox" id="purchase-{{ item.id }}" name="purchase"
+                            data-id="{{ item.id }}" 
+                            {% if item.purchase %}checked{% endif %} 
+                            onchange="togglePurchase(this)">
+                    </td>
+                    <td><a class="btn btn-secondary" href="{% url 'remove_from_cart' item.id %}">Remove</a>          
+                    </td>
+                </div>
+            </tr>
+            {% endfor %}
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td> Total Price </td>
+                <td class="text-end"> ${{ total_price }} </td>
+                <td> <a class="btn btn-outline-dark mt-auto" href="{% url 'shop' %}">Continue Shopping</a></td>
+                <td> <a class="btn btn-primary mt-auto" href="{% url 'create_order' %}">Buy Selected Products</a></td>
+                <td></td>
+            </tr>
+        </table> 
+        </br>
+        </br>
     </div>
-    <tr>
-        <td></td>
-        <td></td>
-        <td> Total Price </td>
-        <td class="text-end"> ${{ total_price }} </td>
-        <td> <a class="btn btn-outline-dark mt-auto" href="{% url 'shop' %}">Continue Shopping</a></td>
-        <td> <a class="btn btn-primary mt-auto" href="{% url 'create_order' %}">Buy Selected Products</a></td>
-        <td></td>
-    </tr>
-</table> 
-</br>
-</br>
+{% endif %}
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

@@ -2,13 +2,11 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 from .models import CartItem, Product,Category,Order,OrderProduct
 from django.contrib.auth import authenticate,login,logout
-from django.contrib import messages
-from .forms import SignUpForm
-from django import forms
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db import transaction
-
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 # Create your views here.
 def storehome(request):
@@ -22,47 +20,6 @@ def aboutus(request):
 def reviews(request):
     return render(request, 'store/reviews.html', {'title': 'Customer Reviews'})
 
-
-def login_user(request):
-    if request.method == "POST":
-        username= request.POST['username']
-        password= request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request,user)
-            messages.success(request, ("You have been Logged in..."))
-            return redirect ('storehome')
-        else:
-            messages.success(request, ("Username or Password incorrect...Please try again"))
-            return redirect ('login_user')
-    else:
-        return render( request, 'store/login.html', {'title': 'Sign in'})
-
-
-def logout_user(request):
-    logout(request)
-    messages.success(request, ('Logged out...Thank you!'))
-    return redirect('storehome')
-
-
-def register_user(request):
-    form = SignUpForm()
-    if request.method == "POST":
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username= form.cleaned_data["username"]
-            password= form.cleaned_data["password1"]
-            #log in user
-            user =authenticate(username=username, password=password)
-            login(request,user)
-            messages.success(request, ("You have registered! Welcome !!!"))
-            return redirect('storehome')
-        else:
-            messages.success(request, ("threre is a problem registering, try agaian"))
-            return redirect('storehome')
-    else:
-        return render(request,'store/register.html', {'form': form, 'title': 'Join with us'})
 
 def shop(request, category = None):
     if category:
@@ -79,6 +36,7 @@ def product(request, product_id):
 
 #Views for Cartitems management
 
+from django.contrib.auth.decorators import login_required
 def add_to_cart(request, product_id):
     if request.user :
         product = Product.objects.get(id=product_id)
@@ -87,6 +45,7 @@ def add_to_cart(request, product_id):
         cart_item.save()
         return redirect('shop')
 
+@login_required(login_url='login_user')
 def view_cart(request):
     if request.user.is_anonymous:
         pass
@@ -95,6 +54,7 @@ def view_cart(request):
         total_price = sum(item.product.sale_price * item.quantity for item in cart_items)
         return render(request, 'store/cart.html', {'cart_items': cart_items, 'total_price': total_price, 'title': 'Shopping Cart'})
 
+from django.contrib.auth.decorators import login_required
 def remove_from_cart(request, item_id):
     cart_item = CartItem.objects.get(id=item_id)
     cart_item.delete()
@@ -133,13 +93,33 @@ def create_order(request):
                     orderproduct = OrderProduct.objects.create(product= item.product, order= new_order)
                     orderproduct.quantity = item.quantity
                     orderproduct.soldprice= soldprice
-                    orderproduct.save()  
+                    orderproduct.save() 
+                    item.delete() 
 
             order_items = OrderProduct.objects.filter(order_id = new_order.id)
             total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
-            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview'})
+            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id})
 
         except Exception as e:
            print ("error creating order : " , e)
            return redirect('view_cart') 
+
+@transaction.atomic
+def delete_order(request, order_id):
+    if request.user.is_authenticated:
+        try:
+            order= Order.objects.get(id=order_id)
+    
+            order_items_delete = OrderProduct.objects.filter(order_id = order.id)
+            if order_items_delete:
+                for item in order_items_delete:
+                    item.delete()       
+        
+            order.delete()
+            messages.success(request,  f"Your Order {order_id} deleted. Please create a new order...")
+            return redirect('view_cart')
+
+        except Exception as e:
+            messages.error(request,  f"Your Order {order_id} could not delete. Please contact support center...")
+            return redirect('view_cart') 
 
