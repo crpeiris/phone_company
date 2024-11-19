@@ -1,5 +1,7 @@
 from datetime import datetime
 from django.shortcuts import render, redirect
+
+from phoneproject import settings
 from .models import CartItem, Product,Category,Order,OrderProduct
 from django.contrib.auth import authenticate,login,logout
 from django.http import JsonResponse
@@ -98,10 +100,10 @@ def create_order(request):
 
             order_items = OrderProduct.objects.filter(order_id = new_order.id)
             total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
-            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id})
+            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id , 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
 
         except Exception as e:
-           print ("error creating order : " , e)
+           print ("error creating order occured : " , e)
            return redirect('view_cart') 
 
 @transaction.atomic
