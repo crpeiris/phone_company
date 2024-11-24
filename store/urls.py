@@ -16,7 +16,8 @@ urlpatterns = [
     path('view_cart/update-purchase/', views.update_purchase, name='update_purchase'),
     path('create_order/', views.create_order, name='create_order'),
     path('delete_order/<int:order_id>/', views.delete_order, name='delete_order'),
-  
+    path('order_list', views.order_list, name='order_list'),
+    path('order_details/<int:order_id>', views.order_details, name='order_details'),
 ]
 urlpatterns += staticfiles_urlpatterns()
  

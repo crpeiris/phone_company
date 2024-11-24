@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 
 from phoneproject import settings
 from .models import CartItem, Product,Category,Order,OrderProduct
@@ -102,7 +102,6 @@ def create_order(request):
             total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
             new_order.total=total_price
             new_order.save()
-            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id})
             return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id , 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
 
         except Exception as e:
@@ -128,3 +127,26 @@ def delete_order(request, order_id):
             messages.error(request,  f"Your Order {order_id} could not delete. Please contact support center...")
             return redirect('view_cart') 
 
+@login_required(login_url='login_user')
+def order_list(request):
+    try:
+        orderlist = Order.objects.filter(customer=request.user)
+        return render(request, 'store/order_list.html', {'orderlist': orderlist, 'title': "My Orders"})
+    except:
+        messages.error(request, "Orders not found.")
+        return redirect('welcome')
+
+
+@login_required(login_url='login_user')
+def order_details(request, order_id):
+    if request.user.is_authenticated:
+        order = get_object_or_404(Order, id=order_id, customer=request.user)
+        order_products = order.orderproduct_set.select_related('product')
+        return render(request, 'store/order_details.html', {
+            'order': order,
+            'order_products': order_products,
+            'title': "Order Details",
+        })
+    else:
+        messages.error(request, "The order not found.")
+        return redirect('welcome')

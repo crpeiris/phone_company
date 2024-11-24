@@ -12,7 +12,6 @@ urlpatterns = [
     path('edit_userprofile_image', views.edit_userprofile_image, name='edit_userprofile_image'),
     path('edit_userprofile_details', views.edit_userprofile_details, name='edit_userprofile_details'),
     path('change_password', views.change_password, name='change_password'),
-
 ]
 urlpatterns += staticfiles_urlpatterns()
  

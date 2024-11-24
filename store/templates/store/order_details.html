@@ -1,0 +1,33 @@
+{% extends 'store/base.html' %} 
+{% load store_formula %}
+{% block content %}
+</br>
+<div class = "row justify-content-center" >
+
+<h3>Products</h3>
+<table class = "table table-success padding: 0.5rem 0.5rem " style="width: 75%;">
+    <thead>
+        <th> Order id {{order.id}}</th>
+        <th> Total Status {{order.status}}</th>
+        <th> Total Value {{order.total}}</th>
+        
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in order_products %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.soldprice }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'order_list' %}">Back to Orders</a>
+
+{% endblock %}
