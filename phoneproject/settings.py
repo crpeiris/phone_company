@@ -65,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'phoneproject.middleware.error_logging_middleware.ErrorLoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'phoneproject.urls'
@@ -83,7 +84,7 @@ TEMPLATES = [
                 'utility.context_processors.categories',
                 'utility.context_processors.cart_items_context',
                 'utility.context_processors.user_profile_image',
-            ],
+            ]
         },
     },
 ]

@@ -8,19 +8,18 @@ from django.views.decorators.csrf import csrf_exempt
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+# Exempt CSRF for this view only since it's dealing with Stripe Checkout
+@csrf_exempt
 def create_checkout_session(request, order_id):
     if request.method == "POST":
         try:
-            # Retrieve order details (assuming you have an Order model)
             order = Order.objects.get(id=order_id, customer=request.user)
 
-            # Calculate total price
             total_price = sum(
                 item.product.sale_price * item.quantity
                 for item in order.orderproduct_set.all()
             )
 
-            # Create Stripe Checkout Session
             session = stripe.checkout.Session.create(
                 payment_method_types=['card'],
                 line_items=[
@@ -36,7 +35,7 @@ def create_checkout_session(request, order_id):
                     },
                 ],
                 metadata={
-                    'user_id': request.user.id,  # Pass user ID for reference
+                    'user_id': request.user.id,
                     'order_id': order_id,
                 },
                 mode='payment',
@@ -46,18 +45,22 @@ def create_checkout_session(request, order_id):
 
             return JsonResponse({'id': session.id})
         except Exception as e:
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error creating checkout session: {e}")
             return JsonResponse({'error': str(e)}, status=500)
 
 
-
+# Payment success view without csrf exemption
 def payment_success(request):
     return render(request, 'payment_mgt/pay_success.html', {'message': 'Payment Success!'})
 
+
+# Payment decline view without csrf exemption
 def payment_decline(request):
     return render(request, 'payment_mgt/payment_decline.html', {'Title': 'Payment Decline!'})
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
 
+# Webhook endpoint for Stripe payment success, CSRF exempted
 @csrf_exempt
 def payment_success_webhook(request):
     payload = request.body
@@ -78,12 +81,14 @@ def payment_success_webhook(request):
     # Handle the event
     if event['type'] == 'checkout.session.completed':
         session = event['data']['object']
-        order_id = session['metadata']['order_id']  # Retrieve the order ID
+        order_id = session['metadata']['order_id']
         user_id = session['metadata']['user_id']
-        # Update the order status in your database
-        ProcessOrder = Order.objects.get(id=order_id)
-        ProcessOrder.pay_refrence = "Paid"
-        ProcessOrder.save()
-        print(f"Payment succeeded for Order ID: {order_id}")
+
+        try:
+            ProcessOrder = Order.objects.get(id=order_id)
+            ProcessOrder.pay_refrence = "Paid"
+            ProcessOrder.save()
+        except Order.DoesNotExist:
+            return JsonResponse({'error': 'Order not found'}, status=400)
 
     return JsonResponse({'status': 'success'}, status=200)
