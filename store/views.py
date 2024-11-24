@@ -100,6 +100,9 @@ def create_order(request):
 
             order_items = OrderProduct.objects.filter(order_id = new_order.id)
             total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
+            new_order.total=total_price
+            new_order.save()
+            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id})
             return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id , 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
 
         except Exception as e:
