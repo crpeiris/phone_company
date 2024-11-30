@@ -128,11 +128,28 @@ def delete_order(request, order_id):
             messages.error(request,  f"Your Order {order_id} could not delete. Please contact support center...")
             return redirect('view_cart') 
 
+
 @login_required(login_url='login_user')
 def order_list(request):
     try:
+        # Get the selected filter status from the request
+        status_filter = request.GET.get('status', None)  # Default to None if no filter is selected
+
+        # Base query to get orders by the logged-in user
         orderlist = Order.objects.filter(customer=request.user)
-        return render(request, 'store/order_list.html', {'orderlist': orderlist, 'title': "My Orders"})
+
+        # Apply filter based on selected status if applicable
+        if status_filter:
+            if status_filter == 'paid':
+                orderlist = orderlist.filter(status=True)  # Assuming 'True' means 'paid'
+            elif status_filter == 'unpaid':
+                orderlist = orderlist.filter(status=False)  # Assuming 'False' means 'unpaid'
+            elif status_filter == 'delivered':
+                orderlist = orderlist.filter(status='delivered')  # Example if status is a string
+            elif status_filter == 'deleted':
+                orderlist = orderlist.filter(status='deleted')  # Example for 'deleted'
+
+        return render(request, 'store/order_list.html', {'orderlist': orderlist, 'title': "My Orders", 'status_filter': status_filter})
     except:
         messages.error(request, "Orders not found.")
         return redirect('welcome')

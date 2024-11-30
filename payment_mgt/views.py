@@ -89,6 +89,7 @@ def payment_success_webhook(request):
             payment_intent_id = session.get('payment_intent')
             ProcessOrder = Order.objects.get(id=order_id)
             ProcessOrder.pay_refrence = payment_intent_id
+            ProcessOrder.status = "paid"
             ProcessOrder.save()
         except Order.DoesNotExist:
             return JsonResponse({'error': 'Order not found'}, status=400)

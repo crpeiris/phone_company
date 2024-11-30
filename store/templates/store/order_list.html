@@ -3,56 +3,67 @@
   <!-- Account page navigation-->
   {% include 'user_accounts/profile_navi_bar.html' %}
   <hr class="mt-0 mb-4" />
-
   <div class="row">
     <div class="col-xl-8">
       <!-- Account details card-->
       <div class="card mb-4">
-        <div class="card-header">Order Details</div>
+        <div class="card-header">Order List</div>
         <div class="card-body">
-          <!-- Profile details form-->
-          <form method="POST" action="{% url 'change_password' %}">
-            <!-- Display error messages -->
-            {% if messages %}
-            <ul class="messages">
-              {% for message in messages %}
-              <li class="text-danger">{{ message }}</li>
+          <!-- Display orders-->
+          <table class="table table-striped" style="width: 75%">
+            <thead>
+              <tr>
+                <th>Order Id</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Pay Status</th>
+                <th>Details</th>
+                <th>Action</th>
+                <!-- New column for payment action -->
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in orderlist %}
+              <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.date }}</td>
+                <td>${{ order.total }}</td>
+                <td>{{ order.status }}</td>
+                <td>
+                  <a
+                    class="btn btn-primary"
+                    href="{% url 'order_details' order.id %}"
+                    >View Order</a
+                  >
+                </td>
+                <td>
+                  {% if order.status != 'paid' %}
+                  <!-- Only show Pay Now button if the order is not paid -->
+                  <form
+                    method="POST"
+                    action="{% url 'create_checkout_session' order.id %}"
+                  >
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success">
+                      Pay Now
+                    </button>
+                  </form>
+                  {% else %}
+                  <!-- Show a message if the order is already paid -->
+                  <span class="text-success">Paid</span>
+                  {% endif %}
+                </td>
+              </tr>
+              {% empty %}
+              <tr>
+                <td colspan="6">You don't have any orders yet.</td>
+              </tr>
               {% endfor %}
-            </ul>
-            {% endif %}
+            </tbody>
+          </table>
 
-            <!--Display orders-->
-            <div class = "row justify-content-center" >
-              <table class = "table table-success padding: 0.5rem 0.5rem " style="width: 75%;">
-                  <tr>
-                      <th>Order Id</th>
-                      <th>Date</th>
-                      <th>Total</th>
-                      <th>Pay Status</th>
-                      <th>Details</th>
-                  {% for order in orderlist %}
-                  <tr>
-                      <div> 
-                          <td>{{ order.id }}</td>
-                          <td>{{ order.date }}</td>
-                          <td>{{ order.total }}</td>
-                          <td>{{ order.status }}</td>
-                          <td> <a class="btn btn-primary" href="{% url 'order_details' order.id %}">View Order</a></td>
-                         
-                          </td>
-                      </div>
-                  </tr>
-                  {% empty %}
-                      <h3 class = "row justify-content-center" >Your order is empty.</h3>
-                  {% endfor %}
-              
-                  </div>
-              </table> 
-
-
-            <!-- Save changes button -->
-            <a class="btn btn-primary" href="{% url 'shop' %}">Shop</a>
-          </form>
+          <!-- Shop button -->
+          <a class="btn btn-primary" href="{% url 'shop' %}">Shop</a>
         </div>
       </div>
     </div>
