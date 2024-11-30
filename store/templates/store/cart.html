@@ -5,11 +5,13 @@
 
 
 {% if cart_items_count == 0 %}
-<h3 class = "row justify-content-center" >Your cart is empty.</h3>
-<h4 class = "row justify-content-center" >Go to shop, select a product to add to the cart</h4>
-<h3 class = "row justify-content-center"><a class="btn btn-primary justify-content-center" href="{% url 'shop' %}">Go to Shop</a></h3>
-
+<div class="text-center">
+    <h3>Your cart is empty.</h3>
+    <h4>Go to shop, select a product to add to the cart</h4>
+    <a class="btn btn-primary mt-3" href="{% url 'shop' %}">Go to Shop</a></br></br>
+</div>
 {% endif %}
+
 
 {% if cart_items_count > 0 %}
     <div class = "row justify-content-center" >

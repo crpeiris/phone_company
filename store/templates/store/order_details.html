@@ -1,43 +1,67 @@
-{% extends 'store/base.html' %} 
+{% extends 'store/base.html' %}
 {% load store_formula %}
+
 {% block content %}
-</br>
-<div class = "row justify-content-center" >
-<table class = "table table-success padding: 0.5rem 0.5rem " style="width: 75%;">
-    <thead>
-        <tr>
-            <th colspan="3"> Order Details</th>
-        </tr>        
-        <tr>
-            <th> Order id :  {{order.id}}</th>
-            <th> Total Status : {{order.status}}</th>
-            <th> Total Value : {{order.total}}</th>
-        </tr>
-        <tr>
-            <th colspan="3"> Product Details</th>
-        </tr>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in order_products %}
-        <tr>
-            <td>{{ item.product.name }}</td>
-            <td>{{ item.quantity }}</td>
-            <td>${{ item.soldprice }}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><a href="{% url 'order_list' %}">Back to Orders</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+          <h3>Order Details</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr class="table-info">
+                <th colspan="3" class="text-center">Order Summary</th>
+              </tr>
+              <tr>
+                <th>Order ID</th>
+                <td colspan="2" class="text-end">{{ order.id }}</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td colspan="2" class="text-end">{{ order.status }}</td>
+              </tr>
+              <tr>
+                <th>Total Value</th>
+                <td colspan="2" class="text-end">${{ order.total }}</td>
+              </tr>
+              <tr class="table-info">
+                <th colspan="3" class="text-center">Product Details</th>
+              </tr>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in order_products %}
+              <tr>
+                <td>{{ item.product.name }}</td>
+                <td class="text-center">{{ item.quantity }}</td>
+                <td class="text-end">${{ item.soldprice }}</td>
+              </tr>
+              {% empty %}
+              <tr>
+                <td colspan="3" class="text-center">No products found in this order.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
 
-
+          <div class="d-flex justify-content-between">
+            <a href="{% url 'delete_order' order.id %}" class="btn btn-danger">Delete Order</a>
+            <a href="{% url 'order_list' %}" class="btn btn-outline-primary">Back to Orders</a>
+            {% if order.status == "unpaid" %}
+            <a href="{% url 'create_order_with_id' order.id %}" class="btn btn-success">Pay Now</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

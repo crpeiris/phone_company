@@ -78,36 +78,57 @@ def update_purchase(request):
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request.'})
 
+
 @transaction.atomic
-def create_order(request):
+def create_order(request, orderid=None):
     if request.user.is_authenticated:
         try:
-            new_order= Order.objects.create( customer=request.user, date=datetime.now().date())
-            #order.address = request.user.address
-            #order.phone = request.user.phone
+            # If orderid is provided, fetch the existing order
+            if orderid:
+                existing_order = get_object_or_404(Order, id=orderid, customer=request.user)
+                order_items = OrderProduct.objects.filter(order_id=existing_order.id)
+                total_price = sum(item.soldprice * item.quantity for item in order_items)
+                return render(request, 'store/order.html', {
+                    'order_items': order_items,
+                    'total_price': total_price,
+                    'title': 'Order Preview',
+                    'orderid': existing_order.id,
+                    'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
+                })
+            
+            # If no orderid, create a new order
+            new_order = Order.objects.create(customer=request.user, date=datetime.now().date())
             new_order.save()
-    
-            cart_items_purchase = CartItem.objects.filter(user=request.user , purchase=True)
+            
+            cart_items_purchase = CartItem.objects.filter(user=request.user, purchase=True)
             if cart_items_purchase:
                 for item in cart_items_purchase:
-                    product = Product.objects.get(id=item.product_id)  
-                    soldprice = product.sale_price  
-                    orderproduct = OrderProduct.objects.create(product= item.product, order= new_order)
+                    product = Product.objects.get(id=item.product_id)
+                    soldprice = product.sale_price
+                    orderproduct = OrderProduct.objects.create(product=item.product, order=new_order)
                     orderproduct.quantity = item.quantity
-                    orderproduct.soldprice= soldprice
-                    orderproduct.save() 
-                    item.delete() 
+                    orderproduct.soldprice = soldprice
+                    orderproduct.save()
+                    item.delete()
 
-            order_items = OrderProduct.objects.filter(order_id = new_order.id)
-            total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
-            new_order.total=total_price
+            order_items = OrderProduct.objects.filter(order_id=new_order.id)
+            total_price = sum(item.soldprice * item.quantity for item in order_items)
+            new_order.total = total_price
             new_order.status = "unpaid"
             new_order.save()
-            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id , 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
+
+            return render(request, 'store/order.html', {
+                'order_items': order_items,
+                'total_price': total_price,
+                'title': 'Order Preview',
+                'orderid': new_order.id,
+                'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
+            })
 
         except Exception as e:
-           print ("error creating order occured : " , e)
-           return redirect('view_cart') 
+            print("Error creating order occurred:", e)
+            return redirect('view_cart')
+
 
 @transaction.atomic
 def delete_order(request, order_id):

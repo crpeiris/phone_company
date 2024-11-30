@@ -10,7 +10,7 @@
         <div class="card-header">Order List</div>
         <div class="card-body">
           <!-- Display orders-->
-          <table class="table table-striped" style="width: 75%">
+          <table class="table table-striped" style="width: 100%">
             <thead>
               <tr>
                 <th>Order Id</th>
@@ -40,13 +40,10 @@
                   {% if order.status != 'paid' %}
                   <!-- Only show Pay Now button if the order is not paid -->
                   <form
-                    method="POST"
-                    action="{% url 'create_checkout_session' order.id %}"
+                    method="GET"
+                    action="{% url 'create_order_with_id' orderid=order.id %}"
                   >
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-success">
-                      Pay Now
-                    </button>
+                    <button type="submit" class="btn btn-success">Pay</button>
                   </form>
                   {% else %}
                   <!-- Show a message if the order is already paid -->
