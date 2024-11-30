@@ -76,6 +76,9 @@
             },
             success: function(response) {
                 console.log('Update successful:', response);
+                // Update the total price dynamically after the AJAX request
+                $('#total-price').text('$' + response.total_price.toFixed(2));
+
             },
             error: function(xhr, status, error) {
                 console.error('Update failed:', error);

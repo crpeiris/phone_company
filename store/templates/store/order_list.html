@@ -37,17 +37,16 @@
                   >
                 </td>
                 <td>
-                  {% if order.status != 'paid' %}
+                  {% if order.status == 'unpaid' %}
                   <!-- Only show Pay Now button if the order is not paid -->
-                  <form
-                    method="GET"
-                    action="{% url 'create_order_with_id' orderid=order.id %}"
+                  <a
+                    class="btn btn-success"
+                    href="{% url 'order_details' order.id %}"
+                    >Pay</a
                   >
-                    <button type="submit" class="btn btn-success">Pay</button>
-                  </form>
                   {% else %}
-                  <!-- Show a message if the order is already paid -->
-                  <span class="text-success">Paid</span>
+                  <!-- Show a message if the order is not unpaid -->
+                  <span class="text-success">{{ order.status }}</span>
                   {% endif %}
                 </td>
               </tr>

@@ -1,5 +1,7 @@
 from datetime import datetime
+import logging
 from django.shortcuts import get_object_or_404, render, redirect
+import stripe
 
 from phoneproject import settings
 from .models import CartItem, Product,Category,Order,OrderProduct
@@ -53,7 +55,8 @@ def view_cart(request):
         pass
     else:
         cart_items = CartItem.objects.filter(user=request.user)
-        total_price = sum(item.product.sale_price * item.quantity for item in cart_items)
+        total_price = sum(item.product.sale_price * item.quantity for item in cart_items if item.purchase)
+
         return render(request, 'store/cart.html', {'cart_items': cart_items, 'total_price': total_price, 'title': 'Shopping Cart'})
 
 from django.contrib.auth.decorators import login_required
@@ -82,20 +85,7 @@ def update_purchase(request):
 @transaction.atomic
 def create_order(request, orderid=None):
     if request.user.is_authenticated:
-        try:
-            # If orderid is provided, fetch the existing order
-            if orderid:
-                existing_order = get_object_or_404(Order, id=orderid, customer=request.user)
-                order_items = OrderProduct.objects.filter(order_id=existing_order.id)
-                total_price = sum(item.soldprice * item.quantity for item in order_items)
-                return render(request, 'store/order.html', {
-                    'order_items': order_items,
-                    'total_price': total_price,
-                    'title': 'Order Preview',
-                    'orderid': existing_order.id,
-                    'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
-                })
-            
+        try:        
             # If no orderid, create a new order
             new_order = Order.objects.create(customer=request.user, date=datetime.now().date())
             new_order.save()
@@ -117,16 +107,29 @@ def create_order(request, orderid=None):
             new_order.status = "unpaid"
             new_order.save()
 
-            return render(request, 'store/order.html', {
-                'order_items': order_items,
-                'total_price': total_price,
-                'title': 'Order Preview',
-                'orderid': new_order.id,
-                'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
-            })
+            return redirect('order_details', order_id=new_order.id)
 
         except Exception as e:
             print("Error creating order occurred:", e)
+            return redirect('view_cart')
+
+@transaction.atomic
+def pay_order(request, orderid):
+    if request.user.is_authenticated:
+        try:
+            # If orderid is provided, fetch the existing order
+            if orderid:
+                order_items = OrderProduct.objects.filter(order_id=orderid)
+                total_price = sum(item.soldprice * item.quantity for item in order_items)
+                return render(request, 'store/order.html', {
+                    'order_items': order_items,
+                    'total_price': total_price,
+                    'title': 'Order Preview',
+                    'orderid': orderid.id,
+                    'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
+                })
+        except Exception as e:
+            print("Error displaying order occurred:", e)
             return redirect('view_cart')
 
 

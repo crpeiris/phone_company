@@ -10,6 +10,8 @@ from django.views.decorators.csrf import csrf_exempt
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Exempt CSRF for this view only since it's dealing with Stripe Checkout
+from django.shortcuts import redirect
+
 @csrf_exempt
 def create_checkout_session(request, order_id):
     if request.method == "POST":
@@ -44,11 +46,16 @@ def create_checkout_session(request, order_id):
                 cancel_url='https://mistakenly-growing-kiwi.ngrok-free.app/payment_mgt/payment_decline/',
             )
 
-            return JsonResponse({'id': session.id})
+            # Redirect to Stripe Checkout session URL
+            return redirect(session.url)
         except Exception as e:
             logger = logging.getLogger(__name__)
             logger.error(f"Error creating checkout session: {e}")
             return JsonResponse({'error': str(e)}, status=500)
+
+
+
+
 
 
 # Payment success view without csrf exemption
