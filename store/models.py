@@ -68,7 +68,11 @@ class Order(models.Model):
 	address = models.CharField(max_length=100, default='', blank=True)
 	phone = models.CharField(max_length=20, default='', blank=True)
 	date = models.DateField(default=datetime.datetime.today)
-	status = models.BooleanField(default=False)
+	status = models.CharField(
+    max_length=20, 
+    choices=[('unpaid', 'Unpaid'), ('paid', 'Paid'), ('delivered', 'delivered'),('deleted','Deleted')],
+    default='unpaid'
+	)
 	total = models.DecimalField(default=0, decimal_places=2, max_digits=6)
 	pay_refrence = models.CharField(max_length=50, default='', blank=True)
 	dilivery_ref = models.CharField(max_length=50, default='', blank=True)

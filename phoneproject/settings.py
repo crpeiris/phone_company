@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,11 +29,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-)sihc1%srvydn8)3+-))m6u#=))z8@l13r8asdxy(v=g=i0u+m'
 
+#Stripe secret keys
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET')
+
+
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['mistakenly-growing-kiwi.ngrok-free.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://mistakenly-growing-kiwi.ngrok-free.app']
 
 # Application definition
 
@@ -40,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'user_accounts',
+    'payment_mgt',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'phoneproject.middleware.error_logging_middleware.ErrorLoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'phoneproject.urls'
@@ -68,7 +84,7 @@ TEMPLATES = [
                 'utility.context_processors.categories',
                 'utility.context_processors.cart_items_context',
                 'utility.context_processors.user_profile_image',
-            ],
+            ]
         },
     },
 ]

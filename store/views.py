@@ -1,5 +1,9 @@
 from datetime import datetime
-from django.shortcuts import render, redirect
+import logging
+from django.shortcuts import get_object_or_404, render, redirect
+import stripe
+
+from phoneproject import settings
 from .models import CartItem, Product,Category,Order,OrderProduct
 from django.contrib.auth import authenticate,login,logout
 from django.http import JsonResponse
@@ -51,7 +55,8 @@ def view_cart(request):
         pass
     else:
         cart_items = CartItem.objects.filter(user=request.user)
-        total_price = sum(item.product.sale_price * item.quantity for item in cart_items)
+        total_price = sum(item.product.sale_price * item.quantity for item in cart_items if item.purchase)
+
         return render(request, 'store/cart.html', {'cart_items': cart_items, 'total_price': total_price, 'title': 'Shopping Cart'})
 
 from django.contrib.auth.decorators import login_required
@@ -60,9 +65,9 @@ def remove_from_cart(request, item_id):
     cart_item.delete()
     return redirect('view_cart')
 
-@csrf_exempt  # Consider adding CSRF protection for production
+@login_required
 def update_purchase(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         item_id = request.POST.get('id')
         purchase_value = request.POST.get('purchase') == 'true'  # Convert to boolean
 
@@ -70,42 +75,73 @@ def update_purchase(request):
             item = CartItem.objects.get(id=item_id)
             item.purchase = purchase_value  # Update the purchase field
             item.save()
-            return JsonResponse({'status': 'success'})
+
+            # Recalculate the total price for selected items only
+            cart_items = CartItem.objects.filter(user=request.user)
+            total_price = sum(item.product.sale_price * item.quantity for item in cart_items if item.purchase)
+
+            # Make sure total_price is a number
+            total_price = round(total_price, 2)
+
+            # Return calculated total price
+            return JsonResponse({'total_price': total_price})
+        
         except CartItem.DoesNotExist:
             return JsonResponse({'status': 'error', 'message': 'Item not found.'})
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request.'})
 
+
 @transaction.atomic
-def create_order(request):
+def create_order(request, orderid=None):
     if request.user.is_authenticated:
-        try:
-            new_order= Order.objects.create( customer=request.user, date=datetime.now().date())
-            #order.address = request.user.address
-            #order.phone = request.user.phone
+        try:        
+            # If no orderid, create a new order
+            new_order = Order.objects.create(customer=request.user, date=datetime.now().date())
             new_order.save()
-    
-            cart_items_purchase = CartItem.objects.filter(user=request.user , purchase=True)
+            
+            cart_items_purchase = CartItem.objects.filter(user=request.user, purchase=True)
             if cart_items_purchase:
                 for item in cart_items_purchase:
-                    product = Product.objects.get(id=item.product_id)  
-                    soldprice = product.sale_price  
-                    orderproduct = OrderProduct.objects.create(product= item.product, order= new_order)
+                    product = Product.objects.get(id=item.product_id)
+                    soldprice = product.sale_price
+                    orderproduct = OrderProduct.objects.create(product=item.product, order=new_order)
                     orderproduct.quantity = item.quantity
-                    orderproduct.soldprice= soldprice
-                    orderproduct.save() 
-                    item.delete() 
+                    orderproduct.soldprice = soldprice
+                    orderproduct.save()
+                    item.delete()
 
-            order_items = OrderProduct.objects.filter(order_id = new_order.id)
-            total_price = sum(purchase.product.sale_price * purchase.quantity for purchase in order_items)
-            new_order.total=total_price
+            order_items = OrderProduct.objects.filter(order_id=new_order.id)
+            total_price = sum(item.soldprice * item.quantity for item in order_items)
+            new_order.total = total_price
             new_order.status = "unpaid"
             new_order.save()
-            return render(request, 'store/order.html', {'order_items': order_items, 'total_price': total_price, 'title': 'Order Preview', 'orderid':new_order.id})
+
+            return redirect('order_details', order_id=new_order.id)
 
         except Exception as e:
-           print ("error creating order : " , e)
-           return redirect('view_cart') 
+            print("Error creating order occurred:", e)
+            return redirect('view_cart')
+
+@transaction.atomic
+def pay_order(request, orderid):
+    if request.user.is_authenticated:
+        try:
+            # If orderid is provided, fetch the existing order
+            if orderid:
+                order_items = OrderProduct.objects.filter(order_id=orderid)
+                total_price = sum(item.soldprice * item.quantity for item in order_items)
+                return render(request, 'store/order.html', {
+                    'order_items': order_items,
+                    'total_price': total_price,
+                    'title': 'Order Preview',
+                    'orderid': orderid.id,
+                    'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY
+                })
+        except Exception as e:
+            print("Error displaying order occurred:", e)
+            return redirect('view_cart')
+
 
 @transaction.atomic
 def delete_order(request, order_id):
@@ -126,3 +162,43 @@ def delete_order(request, order_id):
             messages.error(request,  f"Your Order {order_id} could not delete. Please contact support center...")
             return redirect('view_cart') 
 
+
+@login_required(login_url='login_user')
+def order_list(request):
+    try:
+        # Get the selected filter status from the request
+        status_filter = request.GET.get('status', None)  # Default to None if no filter is selected
+
+        # Base query to get orders by the logged-in user
+        orderlist = Order.objects.filter(customer=request.user)
+
+        # Apply filter based on selected status if applicable
+        if status_filter:
+            if status_filter == 'paid':
+                orderlist = orderlist.filter(status=True)  # Assuming 'True' means 'paid'
+            elif status_filter == 'unpaid':
+                orderlist = orderlist.filter(status=False)  # Assuming 'False' means 'unpaid'
+            elif status_filter == 'delivered':
+                orderlist = orderlist.filter(status='delivered')  # Example if status is a string
+            elif status_filter == 'deleted':
+                orderlist = orderlist.filter(status='deleted')  # Example for 'deleted'
+
+        return render(request, 'store/order_list.html', {'orderlist': orderlist, 'title': "My Orders", 'status_filter': status_filter})
+    except:
+        messages.error(request, "Orders not found.")
+        return redirect('welcome')
+
+
+@login_required(login_url='login_user')
+def order_details(request, order_id):
+    if request.user.is_authenticated:
+        order = get_object_or_404(Order, id=order_id, customer=request.user)
+        order_products = order.orderproduct_set.select_related('product')
+        return render(request, 'store/order_details.html', {
+            'order': order,
+            'order_products': order_products,
+            'title': "Order Details",
+        })
+    else:
+        messages.error(request, "The order not found.")
+        return redirect('welcome')
