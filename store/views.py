@@ -65,9 +65,9 @@ def remove_from_cart(request, item_id):
     cart_item.delete()
     return redirect('view_cart')
 
-@csrf_exempt  # Consider adding CSRF protection for production
+@login_required
 def update_purchase(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         item_id = request.POST.get('id')
         purchase_value = request.POST.get('purchase') == 'true'  # Convert to boolean
 
@@ -75,7 +75,17 @@ def update_purchase(request):
             item = CartItem.objects.get(id=item_id)
             item.purchase = purchase_value  # Update the purchase field
             item.save()
-            return JsonResponse({'status': 'success'})
+
+            # Recalculate the total price for selected items only
+            cart_items = CartItem.objects.filter(user=request.user)
+            total_price = sum(item.product.sale_price * item.quantity for item in cart_items if item.purchase)
+
+            # Make sure total_price is a number
+            total_price = round(total_price, 2)
+
+            # Return calculated total price
+            return JsonResponse({'total_price': total_price})
+        
         except CartItem.DoesNotExist:
             return JsonResponse({'status': 'error', 'message': 'Item not found.'})
 
