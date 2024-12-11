@@ -1,0 +1,12 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block title %}Add Staff{% endblock %}
+
+{% block content %}
+    <h2>Add New Staff</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Staff</button>
+    </form>
+{% endblock %}

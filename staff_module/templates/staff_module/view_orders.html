@@ -1,0 +1,16 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block title %}View Orders{% endblock %}
+
+{% block content %}
+    <h2>Orders</h2>
+    <form method="get">
+        <input type="text" name="query" placeholder="Search by Order Number or Customer Username">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.id }} - {{ order.customer }} - {{ order.status }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

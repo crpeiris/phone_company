@@ -1,0 +1,25 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Staff Dashboard</h2>
+    <p>Welcome to the staff dashboard. From here, you can manage orders, products, and staff members.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>View Orders</h3>
+            <p>Click below to view and manage all orders.</p>
+            <a href="{% url 'view_orders' %}" class="btn btn-primary">View Orders</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Add Products</h3>
+            <p>Click below to add new products to the store.</p>
+            <a href="{% url 'add_product' %}" class="btn btn-primary">Add Product</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Add Staff</h3>
+            <p>Click below to add new staff members to the system.</p>
+            <a href="{% url 'add_staff' %}" class="btn btn-primary">Add Staff</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

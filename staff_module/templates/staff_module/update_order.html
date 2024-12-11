@@ -1,0 +1,17 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block title %}Update Order{% endblock %}
+
+{% block content %}
+    <h2>Update Order</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="status">Status:</label>
+        <input type="text" name="status" value="{{ order.status }}">
+        <label for="pay_reference">Payment Reference:</label>
+        <input type="text" name="pay_reference" value="{{ order.pay_reference }}">
+        <label for="delivery_reference">Delivery Reference:</label>
+        <input type="text" name="delivery_reference" value="{{ order.delivery_reference }}">
+        <button type="submit">Update Order</button>
+    </form>
+{% endblock %}

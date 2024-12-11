@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'store',
     'user_accounts',
     'payment_mgt',
+    'staff_module'
 ]
 
 MIDDLEWARE = [
