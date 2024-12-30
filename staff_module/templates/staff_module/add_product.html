@@ -1,16 +1,11 @@
-<!-- add_product.html -->
 {% extends 'staff_module/staff_base.html' %}
 
 {% block content %}
 <div class="container">
-    <form method="post" enctype="multipart/form-data" id="productForm" action="{% if product.id %}{% url 'update_product' product.id %}{% else %}{% url 'add_product' %}{% endif %}">
+    <form method="post" enctype="multipart/form-data" id="productForm" action="{% url 'add_product' %}">
         {% csrf_token %}
-        <div class="mb-3">
-            <label for="product_id_search" class="form-label">Search Product by ID:</label>
-            <input type="text" id="product_id_search" name="search_id" class="form-control" placeholder="Enter product ID" list="searchResults">
-            <datalist id="searchResults"><!-- products dynamically populated here --></datalist>
-        </div>
-    
+        
+    </br>
         <div class="mb-3">
             <label for="name" class="form-label">Product Name:</label>
             <input type="text" id="name" name="name" class="form-control">
@@ -23,7 +18,12 @@
     
         <div class="mb-3">
             <label for="category" class="form-label">Category:</label>
-            <input type="text" id="category" name="category" class="form-control">
+            <select id="category" name="category" class="form-select">
+                <option value="" selected disabled>Select a category</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
         </div>
     
         <div class="mb-3">
@@ -35,10 +35,14 @@
             <label for="more_info" class="form-label">More Info:</label>
             <textarea id="more_info" name="more_info" class="form-control"></textarea>
         </div>
-    
+
         <div class="mb-3">
             <label for="image" class="form-label">Image:</label>
             <input type="file" id="image" name="image" class="form-control">
+            <!-- Placeholder for image preview -->
+            <div id="imageContainer" class="mt-3">
+                <img id="imagePreview" src="" alt="Product Image" style="max-height: 150px; display: none;">
+            </div>
         </div>
     
         <div class="mb-3">
@@ -51,68 +55,7 @@
             <input type="number" id="sale_price" name="sale_price" class="form-control">
         </div>
     
-        <button type="submit" class="btn btn-primary mt-3">{{ button_label }}</button>
+        <button type="submit" class="btn btn-primary mt-3">Save Product</button>
     </form>
-    
-</div>
-
-<!-- JavaScript for dynamic search and form filling -->
-<script>
-
-$(document).ready(function () {
-    var searchInput = $('#product_id_search');
-    var form = $('#productForm');
-
-    // Live search for products by ID
-    searchInput.on('input', function () {
-        var searchValue = this.value.trim();
-        if (searchValue.length > 0) {
-            $.get('{% url "search_product" %}', { search_value: searchValue }, function (data) {
-                var resultsDiv = $('#searchResults');
-                resultsDiv.empty(); // Clear previous options
-                if (data.length > 0) {
-                    data.forEach(function (product) {
-                        resultsDiv.append(`<option value="${product.id}">${product.id} - ${product.name}</option>`);
-                    });
-                } else {
-                    resultsDiv.append('<option value="">No matching products</option>');
-                }
-            });
-        } else {
-            $('#searchResults').empty(); // Clear the datalist if input is empty
-        }
-    });
-
-    // Fill form when a product is selected from the datalist
-    searchInput.on('change', function () {
-        var searchValue = $(this).val().trim(); // Get the selected product ID
-        if (searchValue.length > 0) {
-            $.ajax({
-                url: '{% url "get_product" %}', // Replace with your URL pattern name
-                data: { search_value: searchValue },
-                method: 'GET',
-                success: function (data) {
-                    if (data) {
-                        // Populate form fields with the fetched product details
-                        form.find('[name="name"]').val(data.name);
-                        form.find('[name="price"]').val(data.price);
-                        form.find('[name="category"]').val(data.category);
-                        form.find('[name="description"]').val(data.description);
-                        form.find('[name="more_info"]').val(data.more_info);
-                        form.find('[name="image"]').val(data.image);
-                        form.find('[name="is_sale"]').prop('checked', data.is_sale);
-                        form.find('[name="sale_price"]').val(data.sale_price);
-                    } else {
-                        alert('No product found.');
-                    }
-                },
-                error: function () {
-                    console.error('Error fetching product data.');
-                }
-            });
-        }
-    });
-});
-
-</script>
+</br>
 {% endblock %}

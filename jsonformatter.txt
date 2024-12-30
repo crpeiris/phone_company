@@ -1,0 +1,6474 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-09-26T21:37:26.532Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Iphone",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-09-26T21:37:35.390Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Android",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-09-26T21:39:45.344Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-09-26T21:41:29.291Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-09-26T21:43:06.854Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "I Phone 15",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2024-09-26T21:43:50.677Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2024-09-26T21:44:42.242Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2024-09-26T21:45:18.232Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2024-09-26T21:45:38.974Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2024-09-26T21:45:47.032Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2024-09-26T21:45:52.518Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "I Phone 15",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2024-09-26T22:06:33.961Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2024-09-26T22:06:35.931Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2024-09-26T22:06:45.107Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2024-09-26T22:06:52.166Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2024-09-26T22:06:57.115Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2024-09-26T22:07:01.097Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2024-09-26T22:07:04.400Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2024-09-26T22:07:07.723Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "I Phone 15",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2024-09-26T22:07:09.799Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2024-10-12T12:27:50.696Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2024-10-12T12:32:27.488Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2024-10-12T12:32:33.695Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2024-10-12T12:32:45.418Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2024-10-12T12:32:58.832Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2024-10-12T12:33:07.940Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2024-10-12T12:33:31.200Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2024-10-12T12:33:36.478Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2024-10-12T12:34:27.609Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is sale\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2024-10-12T19:04:07.961Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Iphone",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2024-10-12T19:45:24.154Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Google Pixel",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2024-10-12T19:47:05.154Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "GooglePixel",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2024-10-12T20:19:12.550Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Google Pixel",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2024-10-16T11:35:31.887Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Feature Phones",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2024-10-16T11:47:00.382Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Google Pixel 9",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2024-10-16T11:48:06.708Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Google Pixel 9",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2024-10-16T15:57:20.532Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Google Pixel 9",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2024-10-16T15:57:36.984Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2024-10-16T15:57:54.227Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2024-10-16T15:58:16.037Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2024-10-16T16:16:56.236Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Google Pixel 9",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2024-10-16T16:17:10.853Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2024-10-16T16:17:38.668Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Iphone Se",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2024-10-16T16:17:45.325Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Samsung A55",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2024-10-16T16:18:02.111Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "I Phone 15",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2024-10-16T16:18:13.161Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2024-10-16T16:18:33.528Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Iphone 16",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"More info\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2024-10-16T23:03:49.526Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "I Phone 15",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2024-10-16T23:04:03.231Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "iPhone",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2024-10-30T17:16:52.949Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "ranil",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2024-10-30T17:17:14.291Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2024-11-01T14:45:32.842Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "32",
+      "object_repr": "1 x Samsung S24",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Purchase\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2024-11-01T14:45:37.815Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "31",
+      "object_repr": "1 x MotorollaG54",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Purchase\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2024-11-02T09:30:08.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2024-11-03T12:16:33.606Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "6",
+      "object_repr": "crr",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2024-11-03T13:15:12.114Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "crr",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Phone\", \"Address1\", \"Address2\", \"City\", \"State\", \"Zipcode\", \"Country\", \"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2024-11-03T13:33:17.639Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "crp",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2024-11-03T13:33:45.352Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "6",
+      "object_repr": "crr",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "70",
+      "object_repr": "45_I Phone 15",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "69",
+      "object_repr": "45_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "68",
+      "object_repr": "44_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "67",
+      "object_repr": "44_Google Pixel 9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "66",
+      "object_repr": "43_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "65",
+      "object_repr": "43_Google Pixel 9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.936Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "64",
+      "object_repr": "42_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "63",
+      "object_repr": "42_Google Pixel 9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "62",
+      "object_repr": "41_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "61",
+      "object_repr": "40_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "60",
+      "object_repr": "39_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "59",
+      "object_repr": "38_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "58",
+      "object_repr": "37_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "57",
+      "object_repr": "36_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "56",
+      "object_repr": "36_Iphone 16",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "55",
+      "object_repr": "36_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "54",
+      "object_repr": "36_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "53",
+      "object_repr": "35_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "52",
+      "object_repr": "35_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "51",
+      "object_repr": "34_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "50",
+      "object_repr": "34_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "49",
+      "object_repr": "33_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "48",
+      "object_repr": "33_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "47",
+      "object_repr": "32_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "46",
+      "object_repr": "32_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "45",
+      "object_repr": "30_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "44",
+      "object_repr": "30_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "43",
+      "object_repr": "29_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "42",
+      "object_repr": "29_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "41",
+      "object_repr": "28_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "40",
+      "object_repr": "28_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "39",
+      "object_repr": "27_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "38",
+      "object_repr": "27_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "37",
+      "object_repr": "26_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "36",
+      "object_repr": "26_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "35",
+      "object_repr": "25_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "34",
+      "object_repr": "25_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "33",
+      "object_repr": "24_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "32",
+      "object_repr": "24_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "31",
+      "object_repr": "23_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "30",
+      "object_repr": "23_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "29",
+      "object_repr": "22_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "28",
+      "object_repr": "22_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "27",
+      "object_repr": "21_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "26",
+      "object_repr": "21_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "25",
+      "object_repr": "20_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "24",
+      "object_repr": "20_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "23",
+      "object_repr": "19_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "22",
+      "object_repr": "18_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "21",
+      "object_repr": "17_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "20",
+      "object_repr": "16_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "19",
+      "object_repr": "15_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "18",
+      "object_repr": "14_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "17",
+      "object_repr": "13_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "16",
+      "object_repr": "12_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "15",
+      "object_repr": "11_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "14",
+      "object_repr": "10_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "13",
+      "object_repr": "9_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "12",
+      "object_repr": "8_Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "11",
+      "object_repr": "8_Iphone 16",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "8_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "8_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "7_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "7_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "6_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "5_Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "5_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "3_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "2_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+      "action_time": "2024-11-03T14:32:02.937Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "1_MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "45",
+      "object_repr": "45",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "44",
+      "object_repr": "44",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "43",
+      "object_repr": "43",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "42",
+      "object_repr": "42",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "41",
+      "object_repr": "41",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "40",
+      "object_repr": "40",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "39",
+      "object_repr": "39",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "38",
+      "object_repr": "38",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "37",
+      "object_repr": "37",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "36",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "35",
+      "object_repr": "35",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "34",
+      "object_repr": "34",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "33",
+      "object_repr": "33",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "32",
+      "object_repr": "32",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "31",
+      "object_repr": "31",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "30",
+      "object_repr": "30",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "29",
+      "object_repr": "29",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "28",
+      "object_repr": "28",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "27",
+      "object_repr": "27",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "26",
+      "object_repr": "26",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "25",
+      "object_repr": "25",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "24",
+      "object_repr": "24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "23",
+      "object_repr": "23",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "22",
+      "object_repr": "22",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "21",
+      "object_repr": "21",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "20",
+      "object_repr": "20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "19",
+      "object_repr": "19",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "18",
+      "object_repr": "18",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "17",
+      "object_repr": "17",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "16",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "15",
+      "object_repr": "15",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "14",
+      "object_repr": "14",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "13",
+      "object_repr": "13",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "12",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "11",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "10",
+      "object_repr": "10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "8",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "7",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "6",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "5",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "4",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "3",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "2",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+      "action_time": "2024-11-03T14:32:13.872Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "1",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "44",
+      "object_repr": "1 x I Phone 15",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "43",
+      "object_repr": "2 x Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "42",
+      "object_repr": "1 x Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "41",
+      "object_repr": "1 x Iphone 16",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "40",
+      "object_repr": "3 x Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "38",
+      "object_repr": "1 x Iphone Se",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "37",
+      "object_repr": "1 x Google Pixel 9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "28",
+      "object_repr": "1 x MotorollaG54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "8",
+      "object_repr": "1 x I Phone 15",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+      "action_time": "2024-11-03T14:32:34.402Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "6 x Samsung S24",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+      "action_time": "2024-11-03T14:33:03.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "cranil",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+      "action_time": "2024-11-03T14:33:03.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "crp",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+      "action_time": "2024-11-03T14:33:03.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "6",
+      "object_repr": "crr",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+      "action_time": "2024-11-03T14:33:03.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "ranil",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 188,
+    "fields": {
+      "action_time": "2024-11-03T14:33:03.263Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "5",
+      "object_repr": "vichithra",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 189,
+    "fields": {
+      "action_time": "2024-11-03T16:00:59.399Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Vichithra",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Phone\", \"Address1\", \"Address2\", \"City\", \"State\", \"Zipcode\", \"Country\", \"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 190,
+    "fields": {
+      "action_time": "2024-11-04T13:39:46.132Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "Vichithra",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 191,
+    "fields": {
+      "action_time": "2024-11-04T13:39:50.887Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "kgvlwije@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 192,
+    "fields": {
+      "action_time": "2024-11-04T13:40:11.817Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "vichithra",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 193,
+    "fields": {
+      "action_time": "2024-11-05T20:17:00.508Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "vichithra",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 194,
+    "fields": {
+      "action_time": "2024-11-05T20:17:32.778Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 195,
+    "fields": {
+      "action_time": "2024-11-05T20:17:49.618Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 196,
+    "fields": {
+      "action_time": "2024-11-05T20:20:24.229Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Phone\", \"Address1\", \"Address2\", \"City\", \"State\", \"Zipcode\", \"Country\", \"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 197,
+    "fields": {
+      "action_time": "2024-11-05T20:23:16.746Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "vichithra",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 198,
+    "fields": {
+      "action_time": "2024-11-05T20:26:18.751Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "kgvlwije@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 199,
+    "fields": {
+      "action_time": "2024-11-05T20:27:17.903Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "vichithra",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 200,
+    "fields": {
+      "action_time": "2024-11-05T21:16:39.708Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "10",
+      "object_repr": "ravindu",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 201,
+    "fields": {
+      "action_time": "2024-11-05T21:18:41.976Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "10",
+      "object_repr": "ravindu",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 202,
+    "fields": {
+      "action_time": "2024-11-06T17:58:43.095Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "10",
+      "object_repr": "ravindu",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 203,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "151",
+      "object_repr": "151",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 204,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "150",
+      "object_repr": "150",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 205,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "149",
+      "object_repr": "149",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 206,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "148",
+      "object_repr": "148",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 207,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "147",
+      "object_repr": "147",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 208,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "146",
+      "object_repr": "146",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 209,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "145",
+      "object_repr": "145",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 210,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "144",
+      "object_repr": "144",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 211,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "143",
+      "object_repr": "143",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "142",
+      "object_repr": "142",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "141",
+      "object_repr": "141",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "140",
+      "object_repr": "140",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "138",
+      "object_repr": "138",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "137",
+      "object_repr": "137",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "136",
+      "object_repr": "136",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 218,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "135",
+      "object_repr": "135",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 219,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "134",
+      "object_repr": "134",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 220,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.816Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "133",
+      "object_repr": "133",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 221,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "132",
+      "object_repr": "132",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 222,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "131",
+      "object_repr": "131",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 223,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "130",
+      "object_repr": "130",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 224,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "129",
+      "object_repr": "129",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 225,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "128",
+      "object_repr": "128",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 226,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "127",
+      "object_repr": "127",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 227,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "126",
+      "object_repr": "126",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 228,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "125",
+      "object_repr": "125",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 229,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "124",
+      "object_repr": "124",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 230,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "123",
+      "object_repr": "123",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 231,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "122",
+      "object_repr": "122",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 232,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "121",
+      "object_repr": "121",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 233,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "120",
+      "object_repr": "120",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 234,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "119",
+      "object_repr": "119",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 235,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "118",
+      "object_repr": "118",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 236,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "117",
+      "object_repr": "117",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 237,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "116",
+      "object_repr": "116",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 238,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "115",
+      "object_repr": "115",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 239,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "114",
+      "object_repr": "114",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 240,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "113",
+      "object_repr": "113",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 241,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "112",
+      "object_repr": "112",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 242,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "111",
+      "object_repr": "111",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 243,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "110",
+      "object_repr": "110",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 244,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "109",
+      "object_repr": "109",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 245,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "108",
+      "object_repr": "108",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 246,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "107",
+      "object_repr": "107",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 247,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "106",
+      "object_repr": "106",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 248,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "105",
+      "object_repr": "105",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 249,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "104",
+      "object_repr": "104",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 250,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "103",
+      "object_repr": "103",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 251,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "102",
+      "object_repr": "102",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 252,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "101",
+      "object_repr": "101",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 253,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "100",
+      "object_repr": "100",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 254,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "99",
+      "object_repr": "99",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 255,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "98",
+      "object_repr": "98",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 256,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "97",
+      "object_repr": "97",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 257,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "96",
+      "object_repr": "96",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 258,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "95",
+      "object_repr": "95",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 259,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "94",
+      "object_repr": "94",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 260,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "93",
+      "object_repr": "93",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 261,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "92",
+      "object_repr": "92",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 262,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "91",
+      "object_repr": "91",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 263,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "90",
+      "object_repr": "90",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 264,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "89",
+      "object_repr": "89",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 265,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "88",
+      "object_repr": "88",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 266,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "87",
+      "object_repr": "87",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 267,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "86",
+      "object_repr": "86",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 268,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "85",
+      "object_repr": "85",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 269,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "84",
+      "object_repr": "84",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 270,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "83",
+      "object_repr": "83",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 271,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "82",
+      "object_repr": "82",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 272,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "81",
+      "object_repr": "81",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 273,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "80",
+      "object_repr": "80",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 274,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "79",
+      "object_repr": "79",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 275,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "78",
+      "object_repr": "78",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 276,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "77",
+      "object_repr": "77",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 277,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "76",
+      "object_repr": "76",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 278,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "75",
+      "object_repr": "75",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 279,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "74",
+      "object_repr": "74",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 280,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "73",
+      "object_repr": "73",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 281,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "72",
+      "object_repr": "72",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 282,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "61",
+      "object_repr": "61",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 283,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "60",
+      "object_repr": "60",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 284,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "59",
+      "object_repr": "59",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 285,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "58",
+      "object_repr": "58",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 286,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "57",
+      "object_repr": "57",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 287,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "56",
+      "object_repr": "56",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 288,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "55",
+      "object_repr": "55",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 289,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "54",
+      "object_repr": "54",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 290,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "53",
+      "object_repr": "53",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 291,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "52",
+      "object_repr": "52",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 292,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "51",
+      "object_repr": "51",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 293,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "50",
+      "object_repr": "50",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 294,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "49",
+      "object_repr": "49",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 295,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "48",
+      "object_repr": "48",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 296,
+    "fields": {
+      "action_time": "2024-11-24T21:34:03.817Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "47",
+      "object_repr": "47",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 297,
+    "fields": {
+      "action_time": "2024-11-24T21:52:23.157Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "156",
+      "object_repr": "156",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 298,
+    "fields": {
+      "action_time": "2024-11-24T21:52:29.504Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "155",
+      "object_repr": "155",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 299,
+    "fields": {
+      "action_time": "2024-11-24T21:52:38.879Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "154",
+      "object_repr": "154",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 300,
+    "fields": {
+      "action_time": "2024-11-24T21:52:45.279Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "153",
+      "object_repr": "153",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 301,
+    "fields": {
+      "action_time": "2024-11-24T21:52:56.515Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "152",
+      "object_repr": "152",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 302,
+    "fields": {
+      "action_time": "2024-12-07T20:31:48.342Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "superadmin",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 303,
+    "fields": {
+      "action_time": "2024-12-07T20:32:23.057Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 304,
+    "fields": {
+      "action_time": "2024-12-07T20:32:56.948Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 305,
+    "fields": {
+      "action_time": "2024-12-07T20:33:37.333Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "superadmin",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 306,
+    "fields": {
+      "action_time": "2024-12-07T20:35:03.334Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 307,
+    "fields": {
+      "action_time": "2024-12-07T20:35:46.529Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 308,
+    "fields": {
+      "action_time": "2024-12-07T20:37:12.952Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "superadmin",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 309,
+    "fields": {
+      "action_time": "2024-12-07T20:37:51.476Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 310,
+    "fields": {
+      "action_time": "2024-12-07T20:40:44.384Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 311,
+    "fields": {
+      "action_time": "2024-12-07T20:41:43.041Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 312,
+    "fields": {
+      "action_time": "2024-12-08T06:22:06.515Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "superadmin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 313,
+    "fields": {
+      "action_time": "2024-12-08T06:23:05.744Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 314,
+    "fields": {
+      "action_time": "2024-12-08T06:26:00.044Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "superadmin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 315,
+    "fields": {
+      "action_time": "2024-12-08T06:27:42.452Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "General Manager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 316,
+    "fields": {
+      "action_time": "2024-12-08T06:28:07.701Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "General Manager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 317,
+    "fields": {
+      "action_time": "2024-12-08T06:29:02.231Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "ranil",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 318,
+    "fields": {
+      "action_time": "2024-12-08T19:31:40.125Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "8",
+      "object_repr": "Google 1",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 319,
+    "fields": {
+      "action_time": "2024-12-08T19:32:01.677Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "9",
+      "object_repr": "Google 2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 320,
+    "fields": {
+      "action_time": "2024-12-08T19:32:22.990Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "10",
+      "object_repr": "Google 3",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 321,
+    "fields": {
+      "action_time": "2024-12-08T19:32:46.168Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "11",
+      "object_repr": "Google 3",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 322,
+    "fields": {
+      "action_time": "2024-12-08T19:33:08.781Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "12",
+      "object_repr": "Google 4",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 323,
+    "fields": {
+      "action_time": "2024-12-29T07:35:18.263Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "Help Desk",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 324,
+    "fields": {
+      "action_time": "2024-12-29T07:39:13.834Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "3",
+      "object_repr": "Manager",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 325,
+    "fields": {
+      "action_time": "2024-12-29T07:46:40.358Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "Help Desk",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 326,
+    "fields": {
+      "action_time": "2024-12-29T07:48:50.832Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "3",
+      "object_repr": "Manager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 327,
+    "fields": {
+      "action_time": "2024-12-29T07:49:09.870Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "Help Desk",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 328,
+    "fields": {
+      "action_time": "2024-12-29T07:51:57.168Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "General Manager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 329,
+    "fields": {
+      "action_time": "2024-12-29T08:05:54.222Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "13",
+      "object_repr": "helpdesk",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 330,
+    "fields": {
+      "action_time": "2024-12-29T08:06:31.989Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "13",
+      "object_repr": "helpdesk",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 331,
+    "fields": {
+      "action_time": "2024-12-29T08:07:49.355Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "14",
+      "object_repr": "manager",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 332,
+    "fields": {
+      "action_time": "2024-12-29T08:08:11.768Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "14",
+      "object_repr": "manager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 333,
+    "fields": {
+      "action_time": "2024-12-29T08:12:26.208Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "15",
+      "object_repr": "genmanager",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 334,
+    "fields": {
+      "action_time": "2024-12-29T08:13:40.640Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "15",
+      "object_repr": "genmanager",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 335,
+    "fields": {
+      "action_time": "2024-12-30T14:43:17.457Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "15",
+      "object_repr": "genmanager",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view category",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add customer",
+      "content_type": 8,
+      "codename": "add_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change customer",
+      "content_type": 8,
+      "codename": "change_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete customer",
+      "content_type": 8,
+      "codename": "delete_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view customer",
+      "content_type": 8,
+      "codename": "view_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 9,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 9,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 9,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 9,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 10,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 10,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 10,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 10,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add order product",
+      "content_type": 11,
+      "codename": "add_orderproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change order product",
+      "content_type": 11,
+      "codename": "change_orderproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete order product",
+      "content_type": 11,
+      "codename": "delete_orderproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view order product",
+      "content_type": 11,
+      "codename": "view_orderproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add profile",
+      "content_type": 12,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change profile",
+      "content_type": 12,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": 12,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view profile",
+      "content_type": 12,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add cart item",
+      "content_type": 13,
+      "codename": "add_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change cart item",
+      "content_type": 13,
+      "codename": "change_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete cart item",
+      "content_type": 13,
+      "codename": "delete_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view cart item",
+      "content_type": 13,
+      "codename": "view_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add profile",
+      "content_type": 14,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change profile",
+      "content_type": 14,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": 14,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view profile",
+      "content_type": 14,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 15,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 15,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 15,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 15,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 16,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 16,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 16,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 16,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add role",
+      "content_type": 17,
+      "codename": "add_role"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change role",
+      "content_type": 17,
+      "codename": "change_role"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete role",
+      "content_type": 17,
+      "codename": "delete_role"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view role",
+      "content_type": 17,
+      "codename": "view_role"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add Staff",
+      "content_type": 18,
+      "codename": "add_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change Staff",
+      "content_type": 18,
+      "codename": "change_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete Staff",
+      "content_type": 18,
+      "codename": "delete_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view Staff",
+      "content_type": 18,
+      "codename": "view_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add is general manager",
+      "content_type": 19,
+      "codename": "add_isgeneralmanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change is general manager",
+      "content_type": 19,
+      "codename": "change_isgeneralmanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete is general manager",
+      "content_type": 19,
+      "codename": "delete_isgeneralmanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view is general manager",
+      "content_type": 19,
+      "codename": "view_isgeneralmanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add is help desk",
+      "content_type": 20,
+      "codename": "add_ishelpdesk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change is help desk",
+      "content_type": 20,
+      "codename": "change_ishelpdesk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete is help desk",
+      "content_type": 20,
+      "codename": "delete_ishelpdesk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view is help desk",
+      "content_type": 20,
+      "codename": "view_ishelpdesk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Can add is order manager",
+      "content_type": 21,
+      "codename": "add_isordermanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Can change is order manager",
+      "content_type": 21,
+      "codename": "change_isordermanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Can delete is order manager",
+      "content_type": 21,
+      "codename": "delete_isordermanager"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Can view is order manager",
+      "content_type": 21,
+      "codename": "view_isordermanager"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "General Manager",
+      "permissions": [
+        13,
+        14,
+        43,
+        44,
+        37,
+        38
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "Help Desk",
+      "permissions": [
+        58,
+        60
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+      "name": "Manager",
+      "permissions": [
+        58,
+        60,
+        61,
+        62
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$17z46LzXw8eMkBPIBMzW9H$WltAbpQr7eZCgSxyRqK6r3sfw+OFl7XtvvsNjWn8iUE=",
+      "last_login": "2024-12-26T12:24:52.562Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "Peiris",
+      "email": "cranil@sjp.ac.lk",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-09-26T21:01:03Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        49,
+        50,
+        51,
+        52,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        41,
+        42,
+        43,
+        44,
+        37,
+        38,
+        39,
+        40,
+        45,
+        46,
+        47,
+        48,
+        53,
+        54,
+        55,
+        56
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$F7cPDUt2762EStl9CX7VhN$cO7gV3PVbYf++R6MH5fjZo5BX/5yAEbXEamkSHReM+o=",
+      "last_login": "2024-12-26T12:24:38.017Z",
+      "is_superuser": false,
+      "username": "ranil",
+      "first_name": "Ranil Peiris",
+      "last_name": "Colombage",
+      "email": "crpeiris@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-05T20:17:32Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$r15yOk4y6DvoNegyGBus6Z$v0oJPW2/DfjJ93gMKLS2ZaG7J32/Uje5zF3YkbR8yjo=",
+      "last_login": "2024-11-05T20:27:51.185Z",
+      "is_superuser": false,
+      "username": "vichithra",
+      "first_name": "Vichithra",
+      "last_name": "Wijewardana",
+      "email": "kgvlwije@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-05T20:23:16Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$INkHHmqQ96oUm9oFqVjz02$Brptv8DVGTsLLyGg3C1eiIDl0/Y0PS14eAzNEqh5frQ=",
+      "last_login": "2024-11-06T18:00:06.230Z",
+      "is_superuser": false,
+      "username": "ravindu",
+      "first_name": "Ravindu Peiris",
+      "last_name": "Colombage",
+      "email": "crr@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-05T21:16:39.074Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$TYoVKcljfIoiquFeR2EN5t$pDTyDIyk3QCk58RXcgG8tQVR5U0DyNNq/S5x/dcY3TA=",
+      "last_login": "2024-11-09T18:27:26.988Z",
+      "is_superuser": false,
+      "username": "Nimal",
+      "first_name": "Colombage Ranil",
+      "last_name": "Peiris",
+      "email": "nimal@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-09T18:27:22.554Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ewaOOUX0XWHRS6ztZ7tl2f$ushj7aA6CjylzJdrz52pQQe1W+G59SlTKFTQnMEQZ+g=",
+      "last_login": "2024-11-12T17:41:54.748Z",
+      "is_superuser": false,
+      "username": "demo1",
+      "first_name": "Demo 1",
+      "last_name": "demo 1",
+      "email": "demo1@sample.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-11T20:17:16.985Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ylwMwiKXNqbxpvl3zMp7Ta$uQ4+4jsiWxFpZz49jnq0DjY71hXY2BMdhzWMDCqPPX0=",
+      "last_login": "2024-12-29T08:50:19.745Z",
+      "is_superuser": false,
+      "username": "helpdesk",
+      "first_name": "Help",
+      "last_name": "Desk",
+      "email": "help@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-29T08:05:53Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$iPb1feiDc9t22WW1HGnec0$/Lx4viuM3UglDGxhjGY8t1Id6UQtNCLNXOusHaR1JE4=",
+      "last_login": "2024-12-29T15:13:02.916Z",
+      "is_superuser": false,
+      "username": "manager",
+      "first_name": "Manager",
+      "last_name": "Staff",
+      "email": "manager@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-29T08:07:48Z",
+      "groups": [
+        3
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$YWIvTEXAj27n5RReOmHbPv$8KEPVUUtII4WJSqo6n48SnFZSwSAbxA+6DeKQxZLDDI=",
+      "last_login": "2024-12-30T14:48:01.271Z",
+      "is_superuser": false,
+      "username": "genmanager",
+      "first_name": "General",
+      "last_name": "Manager",
+      "email": "gen@example.commanager",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-29T08:12:25Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "store",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "store",
+      "model": "customer"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "store",
+      "model": "order"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "store",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "store",
+      "model": "orderproduct"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "store",
+      "model": "profile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "store",
+      "model": "cartitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "user_accounts",
+      "model": "profile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "order"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "role"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "staff"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "isgeneralmanager"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "ishelpdesk"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+      "app_label": "staff_module",
+      "model": "isordermanager"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "0crfw0c01iqqlgeygp7qvm5u4ntfty04",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1t9ymN:dMsMUXjgOQKaJnFw3pGhV8GLyEMmocX2mJ59inYow_A",
+      "expire_date": "2024-11-24T03:38:23.779Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "1ivxgnupx9exlsf6e7jslcl9ins5q9ws",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tDPCl:0jS1iJjhYbQWK2F-jUDL7UKe-hXuOAMu5BQACxlrNWs",
+      "expire_date": "2024-12-03T14:27:47.252Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "2rs3jvptqt85i2m6iu21ilgn99txt3u3",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGll2Nv5R0nMGa-1d4wBypDipEHeHSCmgfTPzXiLitta4dV7iROIsnDj9bgnzg9sO6I7tNss8t3WZktwVedAurzPx83K4fwcVe_3WoI3lwiMUx2iV806RzyblQCaHAdmPIftSiGzxBgZg7UGHgtqBSpDE-wPzEzgg:1t7xK4:1W6rmCka3jKNEcD_7ZcEXHbKicCmtE0w5GwsTe7Om8Y",
+      "expire_date": "2024-11-18T13:40:48.370Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4alpvzk3j5szia92v12qefqzukapigd4",
+    "fields": {
+      "session_data": ".eJxVjDEOAiEQRe9CbQijMIClvWcgAwyyaiBZdivj3XWTLbT9773_EoHWpYZ18BymLM4CxOF3i5Qe3DaQ79RuXabelnmKclPkToe89szPy-7-HVQa9VtHay3qktFHKCpqAINZc0kQSRE5jyp5rRSZk_M2MUHyR9YM6AygseL9AeFYN3Q:1t6tWh:3o0rYyj39zVLGBgX36ZqAKp_VjmCBiCZbUejIuk4ywA",
+      "expire_date": "2024-11-15T15:25:27.294Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4yfxajmaakaey0fy1by3ccbpo457450e",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGll2Nv5R0nMGa-1d4wBypDipEHeHSCmgfTPzXiLitta4dV7iROIsnDj9bgnzg9sO6I7tNss8t3WZktwVedAurzPx83K4fwcVe_3WoI3lwiMUx2iV806RzyblQCaHAdmPIftSiGzxBgZg7UGHgtqBSpDE-wPzEzgg:1t7xKo:XMBj0cHjAKVNnpkiS0_PxFsjTWZEK3w4IC6VHk6zxp0",
+      "expire_date": "2024-11-18T13:41:34.508Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8fy9h0bu0gphc23e120i5jvt7qdqzzja",
+    "fields": {
+      "session_data": ".eJxVjDEOAiEQRe9CbQijMIClvWcgAwyyaiBZdivj3XWTLbT9773_EoHWpYZ18BymLM4CxOF3i5Qe3DaQ79RuXabelnmKclPkToe89szPy-7-HVQa9VtHay3qktFHKCpqAINZc0kQSRE5jyp5rRSZk_M2MUHyR9YM6AygseL9AeFYN3Q:1t7L3M:7X_-W1HPcTCXz2Ly3t828qm1y1NlBjhFQtLZXkTwXFE",
+      "expire_date": "2024-11-16T20:49:00.064Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "f0ztepokxm9t7ro9j7mhqnot3vdzm65f",
+    "fields": {
+      "session_data": ".eJxVjDEOAiEQRe9CbQijMIClvWcgAwyyaiBZdivj3XWTLbT9773_EoHWpYZ18BymLM4CxOF3i5Qe3DaQ79RuXabelnmKclPkToe89szPy-7-HVQa9VtHay3qktFHKCpqAINZc0kQSRE5jyp5rRSZk_M2MUHyR9YM6AygseL9AeFYN3Q:1szhDc:Bd8tNz1SRd2aO12rV6yzDyN3692Vt3T1jfWjMAU-NgY",
+      "expire_date": "2024-10-26T18:52:00.362Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gd5zzhu2x2n2q93ftquwyao65tiqchcy",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tJ8Kb:c51YMHDwmhSS_eaug0UGuRs_fSTQEMP6URCqRkNQE3M",
+      "expire_date": "2024-12-19T09:39:33.468Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gqifqh5p8rh0sytj4nd8x37n3gtfq9a2",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpOYO19q5xADlSnFSIu0OkFNC-mXkvlmBbW9oGLWlCdmZSs9PvmKE8qO8E79BvMy9zX5cp813hBx38OiM9L4f7d9BgtG9dKZCyJFzMgFVHF6AGJB-yF6U4ABus9lZ6Chp1RMxGyaJIE5pijWDvDynKOKg:1tRp07:B0NV8HdMTuwtPya3eeuKyElE_wT8NG5zjFvfWzZyrbk",
+      "expire_date": "2025-01-12T08:50:19.753Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ininet14qz60hfly3b44ao118j41k0fw",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-brKU9JzBWnttHECOFCcV4u4QKQW0b2beSwTa1hq2npcwsTgLLU6_W6T0yG0HfKd2m2Wa27pMUe6KPGiX15nz83K4fweVev3WWAw7gqTTUDKZ4nG0ljkajxms46x5LOgAHdtoFCTjh6IUJnCaHIN4fwD1Uzfh:1tQmv6:Qtrxg6iUCf6AQ0Bah8NuL6tpaKf4juovb9vU6ByKyFI",
+      "expire_date": "2025-01-09T12:24:52.568Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ivn4zg1vzfop9cyjr2iqjvhw378vz9rj",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tLKoR:BfLD_ORiG0ZUAC4_TLM1DC4jrDhobreAdeJJPtgSjJg",
+      "expire_date": "2024-12-25T11:23:27.570Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "j0cn9gik5g5r6go1e309e2fmhqzrwcgg",
+    "fields": {
+      "session_data": ".eJxVjE0OwiAYBe_C2hAEWsCl-56BfH-VqqFJaVfGu2uTLnT7Zua9VIZtLXlrsuSJ1UUFdfrdEOghdQd8h3qbNc11XSbUu6IP2vQwszyvh_t3UKCVbx1HH0xMhFbEskcQ7x1C8Eih93xOAGM0CM51KaYkhoMjidYJRe56Vu8P-8c4eQ:1t7e1j:9bJFR0sOWu4CTSR5pWBK2lKoDXHtTUxwfKQOrzoVKrs",
+      "expire_date": "2024-11-17T17:04:35.074Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "l18fcjcd4wl2s8fq0dn93eu26v8wf0od",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tFKXe:-M9JLUUMyqypqi-V3tv3vjQxfB485a6TqNFACK_sIos",
+      "expire_date": "2024-12-08T21:53:18.788Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "l1cleeunv7p01x5muc1up30txy5ynhf5",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-brKU9JzBWnttHECOFCcV4u4QKQW0b2beSwTa1hq2npcwsTgLLU6_W6T0yG0HfKd2m2Wa27pMUe6KPGiX15nz83K4fweVev3WWAw7gqTTUDKZ4nG0ljkajxms46x5LOgAHdtoFCTjh6IUJnCaHIN4fwD1Uzfh:1tKMz5:y17FL1mc4kvim9QLNgK-kO3jU5lbLyCCZJ4p9RCw8E4",
+      "expire_date": "2024-12-22T19:30:27.949Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "olwztn30czd38mowrl1couysex9kt91b",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tK1dT:6tf-z38nLgorJRhhuZIiIz_OR31WHr5gYRBfwTKNuPs",
+      "expire_date": "2024-12-21T20:42:43.293Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "remvjpla1og00g5n01id0havpjl0gnyt",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tDBWo:DoTx8-Y4jLB5ostfKaQjvDYaDYBVzfNE_jlqEGhnSiI",
+      "expire_date": "2024-12-02T23:51:34.096Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "tgsy6knff0ducml3tznqjbor59wfd4q0",
+    "fields": {
+      "session_data": ".eJxVjEEOgjAQRe_StWmctnTApXvOQKYzg6CmTSisjHdXEha6_e-9_zIDbes0bFWXYRZzMdCY0--YiB-adyJ3yrdiueR1mZPdFXvQavsi-rwe7t_BRHX61k0TPQam5LwjoCCs0mFHzBH17BmDQ1Yck6cYVRx66loIHnQEAmjN-wMSkTgu:1tSH3p:XRZaDrm7zk-20SSqxtfzsLD7V720tb11_Nee0HKzppM",
+      "expire_date": "2025-01-13T14:48:01.278Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "uc6klg7n9lq54upntgq1scdw1q4ky3uo",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tKAmL:SVkht0Ip9lKwMphbrpm_TEPi1ln-psmMunYCL1oCSXw",
+      "expire_date": "2024-12-22T06:28:29.957Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "usfhfsdxfdx42m3sjy6xltjfq20na820",
+    "fields": {
+      "session_data": ".eJxVjE0OwiAYBe_C2hAEWsCl-56BfH-VqqFJaVfGu2uTLnT7Zua9VIZtLXlrsuSJ1UUFdfrdEOghdQd8h3qbNc11XSbUu6IP2vQwszyvh_t3UKCVbx1HH0xMhFbEskcQ7x1C8Eih93xOAGM0CM51KaYkhoMjidYJRe56Vu8P-8c4eQ:1t7dMq:kNTLPuSk19yPmFWTxxbuYgyLO1b6Fkycpdxk-RmFchI",
+      "expire_date": "2024-11-17T16:22:20.414Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vgnhw6xuoy8t8cnmutqsyovu25ydza31",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-brKU9JzBWnttHECOFCcV4u4QKQW0b2beSwTa1hq2npcwsTgLLU6_W6T0yG0HfKd2m2Wa27pMUe6KPGiX15nz83K4fweVev3WWAw7gqTTUDKZ4nG0ljkajxms46x5LOgAHdtoFCTjh6IUJnCaHIN4fwD1Uzfh:1tK1WK:dBwS9JtGUrr2R9vTwiGxvhpWTFOJxjMMf2xkYCa_FKA",
+      "expire_date": "2024-12-21T20:35:20.442Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xdhy6j20ba1e4xuqtemz3orgop7jkfst",
+    "fields": {
+      "session_data": ".eJxVjEEOgjAQRe_StWmctnTApXvOQKYzg6CmTSisjHdXEha6_e-9_zIDbes0bFWXYRZzMdCY0--YiB-adyJ3yrdiueR1mZPdFXvQavsi-rwe7t_BRHX61k0TPQam5LwjoCCs0mFHzBH17BmDQ1Yck6cYVRx66loIHnQEAmjN-wMSkTgu:1tSH01:aHvSn6vlXrHOhDp6nuCihAOe98MljeAIk1ScxGGwlNM",
+      "expire_date": "2025-01-13T14:44:05.502Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ykj9dr6w6gparn09ff2511dzbfkegul7",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pDCQAGX7j0DGZipVA0kpV0Z765NutDtf-_9l4i4rSVunZc4kzgLL06_W8L84LoDumO9NZlbXZc5yV2RB-3y2oifl8P9OyjYy7fWzhNm75IzwFMOASwa5XVwOvEIEGDwhi1ZmjQ5jWm0lpnCAKBUUCjeH9hLN1o:1tDPY4:Xs43WQzYJe8hUA0NSA7zzPMGubf_p3qKMRCjvpiZLh0",
+      "expire_date": "2024-12-03T14:49:48.715Z"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 2,
+    "fields": {
+      "name": "Android"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 3,
+    "fields": {
+      "name": "Google Pixel"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 4,
+    "fields": {
+      "name": "Feature Phones"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 1,
+    "fields": {
+      "user": 8,
+      "date_modified": "2024-12-01T05:10:11.993Z",
+      "phone": "0707653219",
+      "address1": "M÷rtgatan 3,  LGH1302",
+      "address2": "Lgh 1302",
+      "city": "Saltsj÷baden",
+      "state": "Stockholm",
+      "zipcode": "13343",
+      "country": "Sweden",
+      "old_cart": null,
+      "image": "uploads/profiles/crpeiris_7pTgXGr.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 2,
+    "fields": {
+      "user": 9,
+      "date_modified": "2024-11-05T20:23:16.745Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 3,
+    "fields": {
+      "user": 10,
+      "date_modified": "2024-11-06T18:12:58.960Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/ravindusmall.jpg"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 4,
+    "fields": {
+      "user": 11,
+      "date_modified": "2024-11-10T03:36:31.266Z",
+      "phone": "",
+      "address1": "308/2 1st Lane, Campus Road, Rattanapitiya",
+      "address2": "",
+      "city": "Boralasgamuwa",
+      "state": "",
+      "zipcode": "10290",
+      "country": "Sri Lanka",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 5,
+    "fields": {
+      "user": 12,
+      "date_modified": "2024-11-11T20:17:17.507Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 6,
+    "fields": {
+      "user": 13,
+      "date_modified": "2024-12-29T08:05:54.221Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 7,
+    "fields": {
+      "user": 14,
+      "date_modified": "2024-12-29T08:07:49.355Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.profile",
+    "pk": 8,
+    "fields": {
+      "user": 15,
+      "date_modified": "2024-12-29T08:12:26.207Z",
+      "phone": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "country": "",
+      "old_cart": null,
+      "image": "uploads/profiles/avatar1.png"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "name": "Iphone 16",
+      "price": "1100.00",
+      "category": 1,
+      "description": "iPhone 16 . The latest",
+      "more_info": "The iPhone 16 pushes boundaries with its A17 Bionic chip for exceptional speed and efficiency. Its 6.5-inch OLED display with ProMotion offers smooth, crisp visuals. The enhanced triple-camera system excels in low-light photography, delivering professional-grade shots. With satellite connectivity and extended battery life, the iPhone 16 is designed for users seeking cutting-edge technology.",
+      "image": "uploads/product/Iphone16.png",
+      "is_sale": true,
+      "sale_price": "1075.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "name": "Samsung S24",
+      "price": "1000.00",
+      "category": 2,
+      "description": "The Most advance mobile camera",
+      "more_info": "The Samsung S24 is a powerhouse phone featuring a 6.8-inch Dynamic AMOLED 2X display with a 120Hz refresh rate for smooth visuals. Powered by the Snapdragon 8 Gen 3 processor, it excels in speed and multitasking. The 108MP camera with 100x Space Zoom offers impressive photo quality, and its 5000mAh battery supports fast wireless charging, making it ideal for high-performance users.",
+      "image": "uploads/product/samsungS24.png",
+      "is_sale": false,
+      "sale_price": "900.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "name": "I Phone 15",
+      "price": "850.00",
+      "category": 1,
+      "description": "Iphone 15 is the still leading",
+      "more_info": "The iPhone 15 delivers advanced features, powered by the A16 Bionic chip for excellent speed and efficiency. Its 6.1-inch Super Retina XDR display with ProMotion ensures smooth visuals, while the 48MP camera brings professional-quality photography. Cinematic Mode enhances video recording, and improved battery life makes it an ideal choice for users seeking top-tier performance and durability.",
+      "image": "uploads/product/iphone15.png",
+      "is_sale": true,
+      "sale_price": "800.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "name": "Samsung A55",
+      "price": "700.00",
+      "category": 2,
+      "description": "Everything at affrodable price",
+      "more_info": "The Samsung A55 is a well-rounded mid-range phone with a 6.6-inch Super AMOLED display. Powered by the Exynos 1280 processor, it handles daily tasks with ease. Its 64MP quad-camera system captures detailed photos, while the 5000mAh battery offers extended usage and 25W fast charging minimizes downtime. With a blend of performance and affordability, the A55 is ideal for users on a budget.",
+      "image": "uploads/product/Samsung_A55.png",
+      "is_sale": true,
+      "sale_price": "600.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "name": "Iphone Se",
+      "price": "600.00",
+      "category": 1,
+      "description": "Iphone for all",
+      "more_info": "The iPhone SE packs powerful performance into a compact design. It features the A15 Bionic chip for fast, efficient processing and a 4.7-inch Retina HD display. Its 12MP rear camera delivers high-quality photos, and with 5G connectivity, it ensures faster browsing and streaming. The SE also retains the popular Touch ID feature, offering security and convenience in a smaller, user-friendly form factor.",
+      "image": "uploads/product/IphoneSe.png",
+      "is_sale": true,
+      "sale_price": "550.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "name": "MotorollaG54",
+      "price": "500.00",
+      "category": 1,
+      "description": "Still Lead mobile world",
+      "more_info": "The Motorola G54 offers solid performance at an affordable price. It features a 6.5-inch Full HD+ display for clear, vivid visuals. Powered by a MediaTek Dimensity processor, it handles multitasking with ease. The 50MP dual-camera setup ensures sharp photos, while the 5000mAh battery delivers long-lasting usage. With clean Android software, the G54 is a no-nonsense, reliable phone for everyday tasks.",
+      "image": "uploads/product/MotorolaG54.png",
+      "is_sale": false,
+      "sale_price": "450.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "name": "Google Pixel 9",
+      "price": "1200.00",
+      "category": 3,
+      "description": "All  AI features in a simple box.",
+      "more_info": "The Google Pixel 9 offers top-notch AI-powered performance with the latest Tensor G3 chip. Its 6.7-inch OLED display delivers vibrant colors with a 120Hz refresh rate, ideal for smooth visuals. The advanced camera system excels in low-light photography, capturing stunning images. With a long-lasting battery and fast charging, the Pixel 9 ensures you stay connected throughout the day, offering an all-around excellent smartphone experience.",
+      "image": "uploads/product/googlepixel9.png",
+      "is_sale": true,
+      "sale_price": "1100.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "name": "Google 1",
+      "price": "100.00",
+      "category": 1,
+      "description": null,
+      "more_info": "",
+      "image": "uploads/product/googlepixel9_VfEBq6K.png",
+      "is_sale": false,
+      "sale_price": "0.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "name": "Google 2",
+      "price": "200.00",
+      "category": 1,
+      "description": null,
+      "more_info": "",
+      "image": "uploads/product/googlepixel9_B3wnZjk.png",
+      "is_sale": false,
+      "sale_price": "0.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "name": "Google 3",
+      "price": "300.00",
+      "category": 1,
+      "description": null,
+      "more_info": "",
+      "image": "uploads/product/googlepixel9_vfu9g2c.png",
+      "is_sale": false,
+      "sale_price": "0.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Google 3",
+      "price": "300.00",
+      "category": 1,
+      "description": null,
+      "more_info": "",
+      "image": "uploads/product/googlepixel9_IF5bpdp.png",
+      "is_sale": false,
+      "sale_price": "0.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "name": "Google 4",
+      "price": "400.00",
+      "category": 1,
+      "description": null,
+      "more_info": "",
+      "image": "uploads/product/googlepixel9_RnXldgl.png",
+      "is_sale": false,
+      "sale_price": "0.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Google Pixel 10",
+      "price": "1200.00",
+      "category": 3,
+      "description": "Google Pixel 12 ",
+      "more_info": "Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ,Google Pixel 12 ",
+      "image": "uploads/product/googlepixel9_KafaJkD.png",
+      "is_sale": true,
+      "sale_price": "1000.00"
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 158,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-11-30",
+      "status": "paid",
+      "total": "1675.00",
+      "pay_refrence": "pi_3QQi6xFA84CUepzL0faZj3Jc",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 163,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-11-30",
+      "status": "paid",
+      "total": "2300.00",
+      "pay_refrence": "pi_3QQtItFA84CUepzL0SzK2AZr",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 165,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-11-30",
+      "status": "paid",
+      "total": "2100.00",
+      "pay_refrence": "pi_3QQtJdFA84CUepzL2n0EGhVm",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 166,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-01",
+      "status": "paid",
+      "total": "2975.00",
+      "pay_refrence": "pi_3QTdXJFA84CUepzL2HFqYGPv",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 167,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-01",
+      "status": "unpaid",
+      "total": "1200.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 168,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-01",
+      "status": "unpaid",
+      "total": "1075.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 169,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-01",
+      "status": "unpaid",
+      "total": "3500.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 171,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-03",
+      "status": "unpaid",
+      "total": "900.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 172,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-05",
+      "status": "unpaid",
+      "total": "800.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 173,
+    "fields": {
+      "customer": 1,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-08",
+      "status": "unpaid",
+      "total": "4750.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.order",
+    "pk": 174,
+    "fields": {
+      "customer": 8,
+      "quantity": 1,
+      "address": "",
+      "phone": "",
+      "date": "2024-12-11",
+      "status": "unpaid",
+      "total": "1975.00",
+      "pay_refrence": "",
+      "dilivery_ref": ""
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 182,
+    "fields": {
+      "product": 4,
+      "order": 158,
+      "quantity": 1,
+      "soldprice": "600.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 183,
+    "fields": {
+      "product": 1,
+      "order": 158,
+      "quantity": 1,
+      "soldprice": "1075.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 191,
+    "fields": {
+      "product": 2,
+      "order": 163,
+      "quantity": 1,
+      "soldprice": "900.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 192,
+    "fields": {
+      "product": 3,
+      "order": 163,
+      "quantity": 1,
+      "soldprice": "800.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 193,
+    "fields": {
+      "product": 4,
+      "order": 163,
+      "quantity": 1,
+      "soldprice": "600.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 195,
+    "fields": {
+      "product": 2,
+      "order": 165,
+      "quantity": 1,
+      "soldprice": "900.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 196,
+    "fields": {
+      "product": 4,
+      "order": 165,
+      "quantity": 2,
+      "soldprice": "600.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 197,
+    "fields": {
+      "product": 1,
+      "order": 166,
+      "quantity": 1,
+      "soldprice": "1075.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 198,
+    "fields": {
+      "product": 7,
+      "order": 166,
+      "quantity": 1,
+      "soldprice": "1100.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 199,
+    "fields": {
+      "product": 3,
+      "order": 166,
+      "quantity": 1,
+      "soldprice": "800.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 200,
+    "fields": {
+      "product": 4,
+      "order": 167,
+      "quantity": 2,
+      "soldprice": "600.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 201,
+    "fields": {
+      "product": 1,
+      "order": 168,
+      "quantity": 1,
+      "soldprice": "1075.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 202,
+    "fields": {
+      "product": 2,
+      "order": 169,
+      "quantity": 3,
+      "soldprice": "900.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 203,
+    "fields": {
+      "product": 3,
+      "order": 169,
+      "quantity": 1,
+      "soldprice": "800.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 204,
+    "fields": {
+      "product": 2,
+      "order": 171,
+      "quantity": 1,
+      "soldprice": "900.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 205,
+    "fields": {
+      "product": 3,
+      "order": 172,
+      "quantity": 1,
+      "soldprice": "800.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 206,
+    "fields": {
+      "product": 2,
+      "order": 173,
+      "quantity": 2,
+      "soldprice": "900.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 207,
+    "fields": {
+      "product": 3,
+      "order": 173,
+      "quantity": 1,
+      "soldprice": "800.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 208,
+    "fields": {
+      "product": 1,
+      "order": 173,
+      "quantity": 2,
+      "soldprice": "1075.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 209,
+    "fields": {
+      "product": 1,
+      "order": 174,
+      "quantity": 1,
+      "soldprice": "1075.00"
+    }
+  },
+  {
+    "model": "store.orderproduct",
+    "pk": 210,
+    "fields": {
+      "product": 2,
+      "order": 174,
+      "quantity": 1,
+      "soldprice": "900.00"
+    }
+  }
+]

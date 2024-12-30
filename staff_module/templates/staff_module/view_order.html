@@ -1,0 +1,77 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block content %}
+<div class="container-xl d-flex justify-content-center align-items-center mt-4">
+  <div class="col-xl-10">
+    <!-- Account page navigation-->
+    <hr class="mt-0 mb-4" />
+    
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-primary text-white text-center">Order List</div>
+      <div class="card-body">
+        <!-- Display orders-->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Payment Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in page_obj %}
+                <tr>
+                  <td>#{{ order.id }}</td>
+                  <td>{{ order.date|date:"M d, Y" }}</td>
+                  <td>${{ order.total|floatformat:2 }}</td>
+                  <td>
+                    {% if order.status == 'unpaid' %}
+                    <span class="badge bg-warning text-dark">Unpaid</span>
+                    {% else %}
+                    <span class="badge bg-success">Paid</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    <a class="btn btn-info btn-sm text-white" href="{% url 'delete_order' order.id %}">
+                      Delete Order
+                    </a>
+                  </td>
+                </tr>
+                {% empty %}
+                <tr>
+                  <td colspan="6" class="text-center">You don't have any orders yet.</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xl d-flex justify-content-center align-items-center mt-4">
+
+  <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+  </div>
+</div>
+</br>
+{% endblock %}

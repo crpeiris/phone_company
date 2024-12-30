@@ -1,30 +1,80 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Staff, Role
-from store.models import Order, Product
-from .permissions import IsHelpDesk, IsOrderManager, IsGeneralManager
-from django.contrib.auth.decorators import login_required
-from .forms import StaffRegistrationForm, ProductForm  # Corrected import
-from django.contrib import messages  # To display success or error messages
-
-from django.shortcuts import render, redirect, get_object_or_404
+from store.models import Order, Product,Category
+from django.contrib import messages
 from django.http import JsonResponse
-from store.models import Product  # Import Product model
-from .forms import ProductForm  # Import ProductForm
+from .forms import ProductForm
 
+
+from django.contrib.auth.decorators import permission_required
+from django.core.paginator import Paginator
+
+
+
+def staff_home(request):
+    return render(request, 'staff_module/staff_home.html', {'title':'Staff Home'})
+
+@permission_required('staff_module.add_product')
 def add_product(request):
-    if request.method == "POST":
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('add_product')  # Redirect to the same page after adding a new product
-    else:
-        form = ProductForm()
-    return render(request, 'staff_module/add_product.html', {'form': form, 'button_label': 'Add New Product'})
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        price = request.POST.get('price')
+        category_id = request.POST.get('category')
+        description = request.POST.get('description')
+        more_info = request.POST.get('more_info')
+        image = request.FILES.get('image')
+        is_sale = request.POST.get('is_sale') == 'on'
+        sale_price = request.POST.get('sale_price') or None
 
-def search_product(request):
+        # Retrieve the category by its ID
+        try:
+            category_obj = Category.objects.get(id=category_id)
+        except Category.DoesNotExist:
+            messages.error(request, 'Selected category does not exist.')
+            return redirect('add_product')
+        
+        # Create and save the product
+        product = Product.objects.create(
+            name=name,
+            price=price,
+            category=category_obj,
+            description=description,
+            more_info=more_info,
+            image=image,
+            is_sale=is_sale,
+            sale_price=sale_price,
+        )
+        product.save()
+        messages.success(request, 'Product added successfully!')
+        return redirect('add_product') 
+
+    return render(request, 'staff_module/add_product.html') 
+
+
+@permission_required('staff_module.change_product')
+def edit_product(request):
+    if request.method == 'POST':
+        product_id = request.POST.get('product_search_id')
+        if product_id:
+            product = get_object_or_404(Product, id=product_id)
+            form = ProductForm(request.POST, request.FILES, instance=product)
+
+            if form.is_valid():
+                form.save()
+                return JsonResponse({'success': True, 'message': 'Product updated successfully!'})
+            else:
+                return JsonResponse({'success': False, 'errors': form.errors})
+        else:
+            return JsonResponse({'success': False, 'errors': 'Invalid product ID'})
+
+    elif request.method == 'GET':
+        return render(request, 'staff_module/edit_product.html')
+
+
+
+def search_product_list(request):
     search_value = request.GET.get('search_value')
     if search_value:
-        products = Product.objects.filter(id__icontains=search_value)
+        products = Product.objects.filter(id__startswith=search_value)
         results = [{'id': p.id, 'name': p.name} for p in products]
         return JsonResponse(results, safe=False)
     return JsonResponse([], safe=False)
@@ -51,66 +101,19 @@ def get_product(request):
             return JsonResponse({}, safe=False)  # Return empty object if product does not exist
     return JsonResponse({}, safe=False)  # Return empty object if search_value is not provided
 
+@permission_required('staff_module.add_user')
+def add_user(request):
+    return render(request, 'staff_module/add_user.html', {'title':'Add User'})
 
-def update_product(request, product_id):
-    product = get_object_or_404(Product, id=product_id)
-    if request.method == "POST":
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            return redirect('add_product')  # Redirect after updating
-    else:
-        form = ProductForm(instance=product)
-    return render(request, 'staff_module/add_product.html', {'form': form, 'button_label': 'Update Product'})
+@permission_required('staff_module.change_user')
+def edit_user(request):
+    return render(request, 'staff_module/edit_user.html', {'title':'Edit User'})
 
+@permission_required('staff_module.view_order')
+def view_order(request):
+    order_list = Order.objects.all()
+    paginator = Paginator(order_list, 8)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'staff_module/view_order.html', {'title':'View Order', "page_obj": page_obj})
 
-
-@login_required
-def view_orders(request):
-    if not IsHelpDesk().has_permission(request, None):
-        return redirect('unauthorized')  # Redirect to an error page
-    orders = Order.objects.all()
-    return render(request, 'staff_module/view_orders.html', {'orders': orders})
-
-@login_required
-def update_order(request, order_id):
-    if not IsOrderManager().has_permission(request, None):
-        return redirect('unauthorized')
-    order = Order.objects.get(id=order_id)
-    if request.method == 'POST':
-        order.status = request.POST['status']
-        order.pay_reference = request.POST['pay_reference']
-        order.delivery_reference = request.POST['delivery_reference']
-        order.save()
-        return redirect('view_orders')
-    return render(request, 'staff_module/update_order.html', {'order': order})
-
-
-@login_required
-def add_staff(request):
-    if not IsGeneralManager().has_permission(request, None):
-        return redirect('unauthorized')
-
-    if request.method == 'POST':
-        form = StaffRegistrationForm(request.POST)
-        if form.is_valid():
-            staff = form.save(commit=False)  # Save the user but not commit to the database yet
-            staff.set_password(form.cleaned_data['password1'])  # Set the password
-            staff.save()
-
-            # Assign the selected role to the new staff user
-            role = form.cleaned_data['role']
-            staff.role.add(role)
-
-            return redirect('staff_list')
-    else:
-        form = StaffRegistrationForm()
-
-    return render(request, 'staff_module/add_staff.html', {'form': form})
-
-@login_required
-def unauthorized(request):
-    return render(request, 'staff_module/unauthorized.html')
-
-def staff_dashboard(request):
-    return render(request, 'staff_module/staff_dashboard.html')
