@@ -1,0 +1,68 @@
+{% extends 'staff_module/staff_base.html' %}
+
+{% block content %}
+  <body>
+    <div class="container mt-4">
+      <h1 class="mb-4">
+          {% if group_name %}
+              Users in "{{ group_name|capfirst }}" Group
+          {% else %}
+              All Users
+          {% endif %}
+      </h1>
+
+      <form method="get" action="{% url 'view_user' %}" class="mb-3">
+          <div class="row g-2">
+              <div class="col-auto">
+                  <label for="group" class="form-label">Filter by Group:</label>
+              </div>
+              <div class="col-auto">
+                  <select name="group" id="group" class="form-select" onchange="this.form.submit()">
+                      <option value="" {% if not group_name %}selected{% endif %}>All Users</option>
+                      <option value="Manager" {% if group_name == "Manager" %}selected{% endif %}>Manager</option>
+                      <option value="Help Desk" {% if group_name == "Help Desk" %}selected{% endif %}>Help Desk</option>
+                      <option value="General Manager" {% if group_name == "General Manager" %}selected{% endif %}>General Manager</option>
+                    </select>
+              </div>
+          </div>
+      </form>
+
+      {% if users %}
+          <table class="table table-bordered">
+              <thead class="table-dark">
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Type of User</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for user in users %}
+                      <tr>
+                          <td>{{ user.first_name }}</td>
+                          <td>{{ user.last_name }}</td>
+                          <td><a href="{% url 'edit_user' user.id %}">{{ user.email }}</a></td>
+                          <td>
+                              {% for group in user.groups.all %}
+                                  {{ group.name|capfirst }}
+                                  {% if not forloop.last %}, {% endif %}
+                              {% endfor %}
+                          </td>
+                          <td>
+                            <form method="POST" action="{% url 'delete_user' user.id %}" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+                            </form>
+                        </td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      {% else %}
+          <div class="alert alert-warning">No users found.</div>
+      {% endif %}
+  </div>
+</body>
+{% endblock %}

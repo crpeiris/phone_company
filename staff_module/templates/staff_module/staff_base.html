@@ -1,9 +1,6 @@
 {% extends 'store/base.html' %}
 
-<h1> Staff Work Panel</h1>
-
 {% block staff_base %}
-</br>
 <div class="d-flex justify-content-center">
     <ul class="nav nav-pills">
       {% if perms.staff_module.view_order %}
@@ -28,13 +25,12 @@
       {% endif %}
       {% if perms.staff_module.change_user %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'edit_user' %}">Edit User</a>
+        <a class="nav-link" href="{% url 'view_user' %}">View Users</a>
       </li>
       {% endif %}
     </ul>
   </div>
 {% endblock %}
-
 
 {% block content %}
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>

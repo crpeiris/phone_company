@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from store.models import Order, Product,Category
 from django.contrib import messages
 from django.http import JsonResponse
-from .forms import ProductForm
+from .forms import ProductForm , UserEditForm
+
 
 
 from django.contrib.auth.decorators import permission_required
 from django.core.paginator import Paginator
+from django.contrib.auth.models import Group, User
 
 
 
@@ -69,8 +71,6 @@ def edit_product(request):
     elif request.method == 'GET':
         return render(request, 'staff_module/edit_product.html')
 
-
-
 def search_product_list(request):
     search_value = request.GET.get('search_value')
     if search_value:
@@ -103,11 +103,47 @@ def get_product(request):
 
 @permission_required('staff_module.add_user')
 def add_user(request):
-    return render(request, 'staff_module/add_user.html', {'title':'Add User'})
+    if request.method == 'POST':
+        form = UserEditForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('view_user')  # Redirect to the user list after saving
+    else:
+        form = UserEditForm()
+    
+    return render(request, 'staff_module/add_user.html', {'form': form, 'title':'Add User'})
 
 @permission_required('staff_module.change_user')
-def edit_user(request):
-    return render(request, 'staff_module/edit_user.html', {'title':'Edit User'})
+def view_user(request):
+    group_name = request.GET.get('group')  # Get the selected group from the request
+    if group_name:  # If a group is selected, filter users by group
+        users = Group.objects.get(name=group_name).user_set.all() if Group.objects.filter(name=group_name).exists() else []
+    else:  # If no group is selected, display all users
+        users = User.objects.filter(groups__name__in=["Manager", "Help Desk", "General Manager"]).distinct()
+
+    return render(request, 'staff_module/view_users.html', {'users': users, 'group_name': group_name , 'title':'View Users'})
+
+@permission_required('staff_module.add_user')
+def edit_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    
+    if request.method == 'POST':
+        form = UserEditForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('view_user')  # Redirect back to the user list
+    else:
+        form = UserEditForm(instance=user)
+    
+    return render(request, 'staff_module/edit_user.html', {'form': form, 'user': user ,'title':'Edit User'})
+
+def delete_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    user.delete()
+    return redirect('view_user')  # Redirect to the user list after deleting
+
+
+
 
 @permission_required('staff_module.view_order')
 def view_order(request):

@@ -8,6 +8,8 @@ urlpatterns = [
     path('get_product/', views.get_product, name='get_product'),  # For AJAX product search
     path('search_product_list/', views.search_product_list, name='search_product_list'),  # For dynamic search
     path('add_user/', views.add_user, name='add_user'),
-    path('edit_user/', views.edit_user, name='edit_user'),
+    path('view_user/', views.view_user, name='view_user'),
+    path('edit_user/<int:user_id>/', views.edit_user, name='edit_user'),
+    path('delete_user/<int:user_id>/', views.delete_user, name='delete_user'),
     path('view_order/', views.view_order, name='view_order'),
 ]

@@ -1,6 +1,21 @@
 from django import forms
 from .models import Staff, Role
 from store.models import Order,Product
+from django.contrib.auth.models import User, Group
+
+class UserEditForm(forms.ModelForm):
+    groups = forms.ModelMultipleChoiceField(
+        queryset=Group.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        required=False
+    )
+    
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'groups']
+
+
+
 
 
 class ProductForm(forms.ModelForm):

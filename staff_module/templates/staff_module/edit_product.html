@@ -1,6 +1,7 @@
 {% extends 'staff_module/staff_base.html' %}
 
 {% block content %}
+
 <div class="container">
     <form method="post" enctype="multipart/form-data" id="productForm" action="{% url 'edit_product' %}">
         {% csrf_token %}
@@ -87,7 +88,7 @@
         });
 
         // Fill form when a product is selected
-        productSearchInput.on('change', function () {
+        productSearchInput.on('input', function () {
             var searchValue = $(this).val().trim();
             if (searchValue.length > 0) {
                 $.ajax({
@@ -155,4 +156,6 @@
         });
     });
 </script>
+
+
 {% endblock %}
