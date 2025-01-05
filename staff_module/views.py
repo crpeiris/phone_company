@@ -69,7 +69,7 @@ def edit_product(request):
             return JsonResponse({'success': False, 'errors': 'Invalid product ID'})
 
     elif request.method == 'GET':
-        return render(request, 'staff_module/edit_product.html')
+        return render(request, 'staff_module/edit_product.html', {'title':'Edit Product'})
 
 def search_product_list(request):
     search_value = request.GET.get('search_value')
@@ -89,7 +89,10 @@ def get_product(request):
                 'id': product.id,
                 'name': product.name,
                 'price': product.price,
-                'category': product.category.name if product.category else '',
+                'category': {
+                'id': product.category.id,
+                'name': product.category.name,
+                },
                 'description': product.description,
                 'more_info': product.more_info,
                 'image': product.image.url,  # URL for the image

@@ -1,6 +1,6 @@
 from django import forms
 from .models import Staff, Role
-from store.models import Order,Product
+from store.models import Order,Product,Category
 from django.contrib.auth.models import User, Group
 
 class UserEditForm(forms.ModelForm):
@@ -14,17 +14,7 @@ class UserEditForm(forms.ModelForm):
         model = User
         fields = ['first_name', 'last_name', 'email', 'groups']
 
-
-
-
-
-class ProductForm(forms.ModelForm):
-    class Meta:
-        model = Product
-        fields = ['name', 'price', 'category', 'description', 'more_info', 'image', 'is_sale', 'sale_price']
-
-
-        
+       
 
 class StaffRegistrationForm(forms.ModelForm):
     email = forms.EmailField()

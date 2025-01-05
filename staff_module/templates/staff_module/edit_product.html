@@ -23,7 +23,13 @@
 
         <div class="mb-3">
             <label for="category" class="form-label">Category:</label>
-            <input type="text" id="category" name="category" class="form-control">
+            <select id="category" name="category" class="form-select">
+                {% for category in categories %}
+                    <option value="{{ category.id }}" {% if category.id == product.category.id %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                {% endfor %}
+            </select>
         </div>
 
         <div class="mb-3">
@@ -99,7 +105,7 @@
                         if (data) {
                             form.find('[name="name"]').val(data.name);
                             form.find('[name="price"]').val(data.price);
-                            form.find('[name="category"]').val(data.category);
+                            form.find('[name="category"]').val(data.category.id);
                             form.find('[name="description"]').val(data.description);
                             form.find('[name="more_info"]').val(data.more_info);
                             form.find('[name="is_sale"]').prop('checked', data.is_sale);
@@ -126,6 +132,7 @@
 
         // Handle form submission
         form.on('submit', function (e) {
+            alert(csrf_token);
             e.preventDefault(); // Prevent the default form submission
 
             var updatedData = {}; // Object to hold only updated fields
@@ -133,6 +140,7 @@
                 var value = field.value.trim();
                 if (value) {
                     updatedData[field.name] = value;
+                    //updatedData['csrfmoddlewaretoken'] = csrf_token;
                 }
             });
 
