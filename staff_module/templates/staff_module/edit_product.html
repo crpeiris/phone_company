@@ -64,6 +64,35 @@
     </form>
 </div>
 
+<!-- Product Details Modal -->
+{% if product %}
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Name:</strong> {{ product.name }}</p>
+                        <p><strong>Price:</strong> {{ product.price }}</p>
+                        <p><strong>Category:</strong> {{ product.category.name }}</p>
+                        <p><strong>Description:</strong> {{ product.description }}</p>
+                        <p><strong>More Info:</strong> {{ product.more_info }}</p>
+                        {% if product.image %}
+                            <p><strong>Image:</strong><br><img src="{{ product.image.url }}" alt="Product Image" style="max-height: 150px;"></p>
+                        {% endif %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endif %}
+
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
 
 <script>
@@ -150,8 +179,23 @@
                 data: updatedData,
                 success: function (response) {
                     if (response.success) {
-                        alert('Product updated successfully!');
-                        // Optionally, redirect to another page or reset the form
+                        // Populate the modal with the updated product details
+                        $('#productName').text(response.product.name);
+                        $('#productPrice').html(response.product.is_sale ? `<strike>${response.product.price}</strike> $${response.product.sale_price}` : `$${response.product.price}`);
+                        $('#productSalePrice').text(response.product.is_sale ? `$${response.product.sale_price}` : '');
+                        $('#productDescription').text(response.product.description);
+                        $('#productMoreInfo').text(response.product.more_info);
+                        $('#goToShopButton').attr('href', '{% url "shop" %}');
+
+                        // Update the image preview
+                        if (response.product.image) {
+                            $('#productImage').attr('src', response.product.image).show();
+                        } else {
+                            $('#productImage').hide();
+                        }
+
+                        // Show the modal
+                        $('#productDetailsModal').modal('show');
                     } else {
                         alert('Failed to update product.');
                     }

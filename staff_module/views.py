@@ -62,7 +62,8 @@ def edit_product(request):
 
             if form.is_valid():
                 form.save()
-                return JsonResponse({'success': True, 'message': 'Product updated successfully!'})
+                messages.success(request, 'Product updated successfully!')
+                return redirect('edit_product')  # Redirect to the edit_product page
             else:
                 return JsonResponse({'success': False, 'errors': form.errors})
         else:
